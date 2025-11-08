@@ -1,0 +1,78 @@
+/* Hilangkan scroll horizontal */
+html, body {
+  overflow-x: hidden;
+}
+/* Carousel biar proporsional */
+#header-carousel img {
+  height: 100vh;         /* tinggi layar penuh */
+  object-fit: cover;     /* gambar menyesuaikan tanpa distorsi */
+}
+
+/* Logo di section About */
+#about img {
+  max-width: 100%;       /* supaya tidak melebar keluar */
+  height: auto;
+}
+
+/* Gambar berita biar rapi */
+.courses-item img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+@media (max-width: 991px) {
+  .container-fluid.bg-dark {
+    display: none !important;
+  }
+}
+/* container topbar */
+.container-fluid.bg-dark {
+  font-size: 0.875rem;
+}
+
+/* kiri & kanan biar rapi */
+.container-fluid.bg-dark .row > div {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* spacing item kiri */
+.container-fluid.bg-dark .row > div:first-child > div {
+  margin-right: 1.5rem;
+}
+
+.social {
+  display: flex;
+  align-items: center;  /* vertikal tengah */
+  gap: 0rem;          /* jarak antar ikon */
+}
+
+.social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;        /* kotak ikon */
+  height: 2.5rem;       /* kotak ikon */
+  text-decoration: none;
+  color: #ffc107;
+  border-right: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.social a:last-child {
+  border-right: none;
+}
+
+.social a i {
+  font-size: 1.2rem;
+}
+/* Hover effect: warna putih */
+.social a:hover {
+  color: #ffffff;
+}
+.navbar.sticky-top {
+    background-color: #fff !important;  /* paksa putih */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* shadow tipis */
+    transition: background-color 0.3s ease;
+}
