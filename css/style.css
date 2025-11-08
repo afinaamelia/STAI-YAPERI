@@ -9,7 +9,7 @@ html, body {
   object-fit: cover;
 }
 
-/* css toqbar */
+/* start css toqbar */
 @media (max-width: 991px) {
   .container-fluid.bg-dark {
     display: none !important;
@@ -53,7 +53,7 @@ html, body {
 }
 /* end css toqbar */
 
-/* css navbar*/
+/* start css navbar*/
 .navbar.sticky-top {
   background-color: #fff !important;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
@@ -80,6 +80,57 @@ html, body {
 .navbar-nav .nav-link.active {
   color: #ffc107 !important;
   font-weight: 600;
+}
+
+/*=========================================
+Responsive untuk layar kecil (HP & tablet) 
+===========================================*/
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    background-color: #fff;        
+    padding: 10px 0;
+  }
+  .navbar-nav .nav-link {
+    display: block;
+    text-align: center;         
+    padding: 10px 0;               
+    font-size: 16px;              
+    border-bottom: 2px solid #f2f2f2; 
+  }
+  .navbar-nav .nav-link:last-child {
+    border-bottom: none;           
+  }
+  .navbar-nav .nav-link:hover {
+    color: #ffc107 !important;
+  }
+  .navbar-nav .nav-link.active {
+    color: #ffc107 !important;
+  }
+  .navbar-brand span {
+    font-size: 20px; 
+  }
+  .navbar-brand img {
+    width: 60px; 
+  }
+}
+
+/*=================================
+ Responsive untuk layar kecil (HP) 
+ ==================================*/
+@media (max-width: 576px) {
+  .navbar-brand {
+    padding: 0 3vw; 
+  }
+  .navbar-brand img {
+    width: clamp(40px, 12vw, 50px); 
+  }
+  .navbar-brand span {
+    font-size: clamp(14px, 4vw, 16px);
+  }
+  .navbar-nav .nav-link {
+    font-size: clamp(13px, 4vw, 15px);
+    padding: 0.6rem 0;
+  }
 }
 /* End css navbar */
 
