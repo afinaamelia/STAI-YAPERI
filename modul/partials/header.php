@@ -18,13 +18,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+   
     <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
@@ -71,26 +72,26 @@
   </div>
 </div>
 <!-- Topbar End -->
-    <!-- Navbar Start -->
-<nav class="navbar navbar-expand-lg navbar-light sticky-top bg-white p-0 shadow-sm">
-<a href="index.php" class="navbar-brand d-flex align-items-center border-end px-4 px-lg-5">
+
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg navbar-light sticky-top shadow-sm">
+  <a href="index.php" class="navbar-brand d-flex align-items-center border-end px-4 px-lg-5">
     <img src="img/logo1.png" width="78" alt="Logo" class="me-2">
-    <span class="fs-2 fw-bold m-0" style="display:inline-block; transform: translateY(5px);">STAI YAPERI</span>
-</a>
-    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+    <span class="fs-2 fw-bold m-0">STAI YAPERI</span>
+  </a>
 
-   <!-- Navbar Menu -->
-<div class="collapse navbar-collapse" id="navbarCollapse">
-    <div class="navbar-nav ms-auto p-4 p-lg-0" style="font-size:0.95rem;  font-family: 'Roboto' font-weight:400;">
-        <a href="index.php" class="nav-item nav-link">Beranda</a>
-        <a href="?page=about" class="nav-item nav-link">Tentang kami</a>
-        <a href="?page=pmb" class="nav-item nav-link">PMB online</a>
-        <a href="?page=kerjasama" class="nav-item nav-link">Kerja sama</a>
-        <a href="?page=kontak" class="nav-item nav-link">Kontak</a>
+  <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar Menu -->
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <div class="navbar-nav ms-auto me-4 p-4 p-lg-0">
+      <a href="index.php" class="nav-item nav-link active mx-2">Beranda</a>
+      <a href="?page=about" class="nav-item nav-link mx-2">Tentang Kami</a>
+      <a href="?page=pmb" class="nav-item nav-link mx-2">PMB Online</a>
+      <a href="?page=kerjasama" class="nav-item nav-link mx-2">Kerja Sama</a>
+      <a href="?page=kontak" class="nav-item nav-link mx-2">Kontak</a>
     </div>
-</div>
-
+  </div>
 </nav>
-<!-- Navbar End -->

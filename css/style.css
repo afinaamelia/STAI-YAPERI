@@ -2,198 +2,93 @@
 html, body {
   overflow-x: hidden;
 }
-/* Carousel biar proporsional */
-#header-carousel img {
-  height: 100vh;         /* tinggi layar penuh */
-  object-fit: cover;     /* gambar menyesuaikan tanpa distorsi */
-}
-
-/* Logo di section About */
-#about img {
-  max-width: 100%;       /* supaya tidak melebar keluar */
-  height: auto;
-}
-
 /* Gambar berita biar rapi */
 .courses-item img {
   width: 100%;
   height: 230px;
   object-fit: cover;
 }
+
+/* css toqbar */
 @media (max-width: 991px) {
   .container-fluid.bg-dark {
     display: none !important;
   }
 }
-/* container topbar */
 .container-fluid.bg-dark {
   font-size: 0.875rem;
 }
-
-/* kiri & kanan biar rapi */
 .container-fluid.bg-dark .row > div {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 15px;
 }
-
-/* spacing item kiri */
 .container-fluid.bg-dark .row > div:first-child > div {
   margin-right: 1.5rem;
 }
-
 .social {
   display: flex;
-  align-items: center;  /* vertikal tengah */
-  gap: 0rem;          /* jarak antar ikon */
+  align-items: center;  
+  gap: 0rem;         /
 }
-
 .social a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 2.5rem;        /* kotak ikon */
-  height: 2.5rem;       /* kotak ikon */
+  width: 2.5rem;        
+  height: 2.5rem;       
   text-decoration: none;
   color: #ffc107;
   border-right: 1px solid rgba(255, 255, 255, 0.4);
 }
-
 .social a:last-child {
   border-right: none;
 }
-
 .social a i {
   font-size: 1.2rem;
 }
-/* Hover effect: warna putih */
 .social a:hover {
   color: #ffffff;
 }
+/* end css toqbar */
+
+/* css navbar*/
 .navbar.sticky-top {
-    background-color: #fff !important;  /* paksa putih */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* shadow tipis */
-    transition: background-color 0.3s ease;
+  background-color: #fff !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
-    /* =============================
-   Responsive Navbar HP kecil
-============================= */
-@media (max-width: 576px) {
-  .navbar {
-    padding: 0.3rem 0.8rem; /* agak rapet biar muat */
-  }
-
-  /* Logo + teks STAI YAPERI */
-  .navbar-brand {
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-  }
-
-  .navbar-brand img {
-    width: 45px;   /* kecilin logo */
-    height: auto;
-  }
-
-  .navbar-brand span {
-    font-size: 1rem;  /* kecilin teks */
-    transform: translateY(2px);
-  }
-
-  /* Tombol toggle (hamburger) geser dikit ke kanan */
-  .navbar-toggler {
-    margin-left: auto;  /* biar nempel kanan */
-    padding: 0.2rem 0.4rem;
-  }
-
-  /* Dropdown menu */
-  .navbar-collapse {
-    width: 100%;
-    text-align: center;
-    background: #fff;
-    border-top: 1px solid #ddd;
-  }
-
-  .navbar-nav .nav-link {
-    padding: 0.6rem 0;
-    font-size: 0.95rem;
-  }
+.navbar-brand span {
+  color: #222;
 }
-  /* =============================
-   Responsive Navbar
-============================= */
-
-/* Tablet & HP */
-@media (max-width: 991.98px) {
-  /* Navbar jadi satu baris: logo + nama + tombol toggle */
-  .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.4rem 1rem;
-  }
-
-  /* Logo dan teks STAI YAPERI sejajar */
-  .navbar-brand {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0;
-    border: none !important;
-  }
-
-  /* Ukuran logo disesuaikan agar pas di HP */
-  .navbar-brand img {
-    width: 60px;
-    height: auto;
-  }
-
-  /* Teks STAI YAPERI */
-  .navbar-brand span {
-    font-size: 1.2rem;
-    transform: translateY(3px);
-    font-weight: 700;
-  }
-
-  /* Tombol hamburger sejajar kanan */
-  .navbar-toggler {
-    border: none;
-    background: transparent;
-    margin-right: 0.3rem;
-  }
-
-  /* Posisi dropdown menu */
-  .navbar-collapse {
-    background: #fff;
-    border-top: 1px solid #ddd;
-    position: static; /* ⬅️ bukan absolute lagi */
-    top: 100%; /* pas di bawah navbar */
-    left: 0;
-    width: 100%;
-    z-index: 999;
-  }
-
-  /* Isi menu di HP biar rapi tengah */
-  .navbar-nav {
-    text-align: center;
-    padding: 0.8rem 0;
-  }
-
-  .navbar-nav .nav-link {
-    padding: 0.7rem 0;
-    display: block;
-    border-bottom: 1px solid #e0e0e0; /* garis pemisah antar menu */
-    color: #333; /* warna teks */
-    transition: all 0.3s ease;
-  }
-    /* Hover effect biar lebih interaktif */
-  .navbar-nav .nav-link:hover {
-    color: #ffc107;
-    background-color: rgba(255, 193, 7, 0.05); /* sedikit kuning transparan */
-  }
+.navbar-nav .nav-link {
+  color: #333 !important;
+  font-weight: 500;
+  padding: 12px 18px;
+  transition: color 0.3s ease;
+  font-size: 17px;
+ }
+.navbar-nav .nav-link:hover {
+  color: #ffc107 !important; 
 }
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link:active {
+  color: #ffc107 !important;
+}
+.navbar-nav .nav-link.active {
+  color: #ffc107 !important;
+  font-weight: 600;
+}
+/* End css navbar */
+
   /* Header carousel umum */
+  /* Carousel biar proporsional */
+#header-carousel img {
+  height: 100vh;         /* tinggi layar penuh */
+  object-fit: cover;     /* gambar menyesuaikan tanpa distorsi */
+}
 .carousel-caption {
   position: absolute;
   top: 0;
@@ -811,6 +706,10 @@ html, body {
 
 /* ====== BAGIAN UTAMA #ABOUT ====== */
 
+#about img {
+  max-width: 100%;       /* supaya tidak melebar keluar */
+  height: auto;
+}
 /* Layout utama */
 #about h5.text-dark.fw-bold {
   position: relative;
