@@ -72,9 +72,9 @@
                         </div>
                         <div class="ps-3" style="margin-top:15px;">
                     <ul class="list p-0 m-0" style="list-style:none; font-size:15px; line-height:1.7;">
-                                <li>- <a href="modul/ketua.php">Ketua STAI YAPERI</a></li>
-                                <li>- <a href="modul/dosen.php">Struktural STAI YAPERI</a></li>
-                                <li>- <a href="modul/dema.php">Organisasi Kampus</a></li>
+                                <li>- <a href="?page=ketua">Ketua STAI YAPERI</a></li>
+                                <li>- <a href="?page=dosen">Struktural STAI YAPERI</a></li>
+                                <li>- <a href="?page=dema">Organisasi Kampus</a></li>
                                 </ul>
                     </div>
                     </div>

@@ -14,6 +14,15 @@ switch ($page) {
       case'kontak':
       include"modul/kontak.php";
       break;
+      case'ketua':
+      include"modul/ketua.php";
+      break;
+      case'dosen':
+      include"modul/dosen.php";
+      break;
+      case'dema':
+      include"modul/dema.php";
+      break;
   
   default:
     include"modul/home.php";

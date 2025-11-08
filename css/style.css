@@ -2126,3 +2126,33 @@ h1.display-6::after {
     text-align: left; /* paragraf deskripsi ikut kiri */
   }
 }
+
+    /* Workprocess */
+    #teks-workprocess{
+        position: relative;
+        left: 50px;
+        top: -400px;
+    }
+    #logo-workprocess{
+        position: relative;
+        left: 700px;
+        top: -50px;
+    }
+    #logo-email{
+      position: relative;
+      top: -15px;
+    }
+    #email-teks{
+      position: relative;
+      left: 50px;
+      top: -50px;
+    }
+    #instagram-teks{
+      position: relative;
+      left: 50px;
+      top: -50px;
+    }
+    #instagram-logo{
+      position: relative;
+      top: -50px;
+    }

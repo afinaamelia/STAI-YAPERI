@@ -1,0 +1,19 @@
+ <!-- Lembaga -->
+            <div class="col-lg-3 wow fadeIn" data-wow-delay="0.1s">
+                <div class="bg-white shadow d-flex align-items-start h-100 p-3"  style="min-height: 9.375rem; font-size:0.8125rem; box-shadow: 0 0.25rem 0.625rem rgba(0,0,0,0.08); border: 0.063rem solid #ddd;">
+                    <div class="d-flex align-items-start">
+                    <div class="flex-shrink-0 bg-primary d-flex align-items-center justify-content-center px-3 py-2" 
+                    style="height:1.5625rem; border-radius:4px; width:100px; font-size:17px; white-space:nowrap;">
+                    <i class="fa fa-file-alt text-white me-2"></i>
+                    <span class="text-white">Lembaga</span>
+                        </div>
+                        <div class="ps-3" style="margin-top:15px;">
+                    <ul class="list p-0 m-0" style="list-style:none; font-size:15px; line-height:1.7;">
+                                <li>- <a href="?page=ketua">Ketua STAI YAPERI</a></li>
+                                <li>- <a href="?page=dosen">Struktural STAI YAPERI</a></li>
+                                <li>- <a href="?page=dema">Organisasi Kampus</a></li>
+                                </ul>
+                    </div>
+                    </div>
+                </div>
+            </div>

@@ -401,7 +401,7 @@ html, body {
 
 ?>
 <center>
-<img src="../gbrheader/<?=$tampil['gambar']?>" style= "margin-top:-30rem; width: 800px;">
+<img src="../img/<?=$tampil['gambar']?>" style= "margin-top:-30rem; width: 800px;">
 </center>
     
   <!-- Full width footer -->
