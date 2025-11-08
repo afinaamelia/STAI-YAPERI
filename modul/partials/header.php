@@ -88,7 +88,7 @@
         <a href="?page=about" class="nav-item nav-link">Tentang kami</a>
         <a href="?page=pmb" class="nav-item nav-link">PMB online</a>
         <a href="?page=kerjasama" class="nav-item nav-link">Kerja sama</a>
-        <a href="modul/kontak.php" class="nav-item nav-link">Kontak</a>
+        <a href="?page=kontak" class="nav-item nav-link">Kontak</a>
     </div>
 </div>
 

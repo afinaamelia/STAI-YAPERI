@@ -1950,3 +1950,179 @@ top: 100px;
         margin-left:-3.4rem ;
     }
   }
+
+  /* Pastikan peta dan teks sejajar (sampingan) di desktop/tablet */
+h1.display-6 {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem; /* jarak antara teks dan garis */
+  font-size: 1.7rem;
+  text-align: center; /* pastikan teksnya center */
+}
+
+h1.display-6::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%); /* biar garis tepat di tengah */
+  width: 80%; /* panjang garis (ubah sesuai selera: 50%, 80%, dst) */
+  height: 0.2rem; /* ketebalan garis */
+  background-color: #ffc107; /* warna kuning sesuai tema */
+  border-radius: 15%;
+}
+
+.row.g-5.align-items-center {
+  display: flex;
+  flex-wrap: nowrap; /* biar nggak turun ke bawah */
+  align-items: flex-start;
+  gap: 2rem; /* kasih jarak antara peta dan teks */
+}
+
+/* Biar kolom teks tidak terlalu lebar dan sejajar rapi */
+.col-lg-6.wow.fadeInUp[data-wow-delay="0.5s"] {
+  flex: 1; /* biar fleksibel lebar kolom */
+  min-width: 0;
+}
+
+/* Biar iframe peta responsif dan sejajar */
+.position-relative.h-100 iframe {
+  width: 100%;
+  height: 450px;
+  border-radius: 10px;
+}
+
+/* Styling teks kontak */
+.contact-info p {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: flex-start; /* biar teks mulai dari atas sejajar ikon */
+  flex-wrap: nowrap; /* biar ikon & teks di baris yang sama */
+  white-space: normal; /* biar teks bisa turun ke bawah */
+  word-break: break-word;
+  text-align: left;
+}
+
+.contact-info i {
+  color: #ffc107;
+  min-width: 25px; /* ukuran tetap buat ikon */
+  margin-top: 2px; /* biar sejajar pas teks tinggi */
+  text-align: center;
+}
+
+/* Responsif - kalau layar kecil (tablet & HP) baru jadi vertikal */
+/* 💻 Layout Tablet & iPad (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+     .position-relative.h-100 iframe {
+    width: 100%;
+    height: 500px; /* lebih pendek dari desktop */
+    border-radius: 8px;
+  }
+  .row.g-5.align-items-center {
+    flex-direction: row; /* tetap samping */
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .col-lg-6.wow.fadeInUp[data-wow-delay="0.1s"],
+  .col-lg-6.wow.fadeInUp[data-wow-delay="0.5s"] {
+    width: 50%;
+    max-width: none;
+    text-align: left; /* teks tetap rata kiri */
+  }
+
+  .position-relative.h-100 iframe {
+    width: 100%;
+    height: 380px; /* sedikit lebih tinggi */
+    border-radius: 10px;
+  }
+
+  h1.display-6 {
+    font-size: 1.2rem;
+    text-align: left;
+  }
+  p.mb-4 {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    text-align: justify; /* 🔹 biar teks rata kiri-kanan */
+  }
+  .contact-info p {
+    font-size: 0.95rem;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .contact-info i {
+    font-size: 1.3rem;
+    min-width: 24px;
+  }
+}
+/* ============================= */
+/* 📱 RESPONSIVE UNTUK HP */
+/* ============================= */
+@media (max-width: 768px) {
+  .row.g-5.align-items-center {
+    flex-direction: column; /* ubah dari samping jadi atas-bawah */
+    align-items: center; /* biar peta & teks di tengah */
+    gap: 1.5rem; /* jarak antar elemen */
+  }
+
+  .col-lg-6.wow.fadeInUp[data-wow-delay="0.1s"],
+  .col-lg-6.wow.fadeInUp[data-wow-delay="0.5s"] {
+    width: 100%;
+    max-width: 80%; /* biar nggak terlalu lebar di HP besar */
+    text-align: center; /* biar isi di tengah */
+  }
+
+  /* Biar iframe (peta) selalu tengah */
+  .position-relative.h-100 {
+    width:100%;
+    display: flex;
+    justify-content: center;
+    margin-left:-1.5rem;;
+  }
+
+  .position-relative.h-100 iframe {
+    width: 100%;
+    max-width: 450px; /* batas maksimal biar proporsional */
+    height: 300px; /* lebih kecil di HP */
+  }
+  .col-lg-6.wow.fadeInUp[data-wow-delay="0.5s"] {
+    padding-left: 0.8rem; /* geser sedikit ke kiri */
+    margin-left:-1.5rem;
+  }
+
+  .contact-info {
+    margin-left: 0; 
+    padding-left: 0.5rem; /* tambah dikit biar sejajar teks lain */
+  }
+
+  h1.display-6,
+  h6.text-primary,
+  p.mb-4 {
+    margin-left: 0.5rem; /* geser semua teks utama ke kiri */
+  }
+  .contact-info {
+    text-align: left; /* semua teks kontak rata kiri */
+    margin: 0 auto; /* biar tetap posisi tengah secara keseluruhan */
+  }
+
+  .contact-info p {
+    justify-content: flex-start; /* ikon & teks mulai dari kiri */
+    text-align: left; 
+    margin-left: 0; /* hapus jarak kiri jika ada */
+  }
+
+  .contact-info i {
+    font-size: 1.4rem; /* ukuran ikon tetap pas di HP */
+    min-width: 28px; /* biar ikon sejajar kiri rapi */
+  }
+
+  h1.display-6 {
+   font-size:1.3rem;
+  }
+
+  p.mb-4 {
+    text-align: left; /* paragraf deskripsi ikut kiri */
+  }
+}

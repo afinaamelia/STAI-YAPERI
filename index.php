@@ -11,6 +11,9 @@ switch ($page) {
       case'kerjasama':
       include"modul/kerjasama.php";
       break;
+      case'kontak':
+      include"modul/kontak.php";
+      break;
   
   default:
     include"modul/home.php";
