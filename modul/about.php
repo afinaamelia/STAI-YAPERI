@@ -10,7 +10,7 @@
 
 
   <!-- About Start -->
-<div id="about">
+<div id="about" class="mt-5">
   <div class="container-xxl py-8">
     <div class="container">
       <div class="row align-items-center justify-content-between">

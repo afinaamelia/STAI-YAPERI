@@ -8,6 +8,9 @@ switch ($page) {
     case'pmb':
       include"modul/pmb.php";
       break;
+      case'kerjasama':
+      include"modul/kerjasama.php";
+      break;
   
   default:
     include"modul/home.php";

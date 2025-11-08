@@ -85,9 +85,9 @@
 <div class="collapse navbar-collapse" id="navbarCollapse">
     <div class="navbar-nav ms-auto p-4 p-lg-0" style="font-size:0.95rem;  font-family: 'Roboto' font-weight:400;">
         <a href="index.php" class="nav-item nav-link">Beranda</a>
-        <a href="modul/about.php" class="nav-item nav-link">Tentang kami</a>
+        <a href="?page=about" class="nav-item nav-link">Tentang kami</a>
         <a href="?page=pmb" class="nav-item nav-link">PMB online</a>
-        <a href="modul/kerjasama.php" class="nav-item nav-link">Kerja sama</a>
+        <a href="?page=kerjasama" class="nav-item nav-link">Kerja sama</a>
         <a href="modul/kontak.php" class="nav-item nav-link">Kontak</a>
     </div>
 </div>
