@@ -52,9 +52,9 @@
                         <div class="ps-3" style="margin-top:1rem;">
                     <ul class="list p-0 m-0" style="list-style:none; font-size:0.95rem; line-height: 1.6;">
                         <li>- <a href="?page=about">Sejarah STAI YAPERI</a></li>
-                        <li>- <a href="modul/visimisi.php">Visi, Misi & Tujuan</a></li>
-                        <li>- <a href="modul/mars.php">Mars & Hymne STAI YAPERI</a></li>
-                        <li>- <a href="modul/lambang.php">Logo STAI YAPERI</a></li>
+                        <li>- <a href="?page=visimisi">Visi, Misi & Tujuan</a></li>
+                        <li>- <a href="?page=mars">Mars & Hymne STAI YAPERI</a></li>
+                        <li>- <a href="?page=lambang">Logo STAI YAPERI</a></li>
                     </ul>
                     </div>
                     </div>
@@ -92,7 +92,7 @@
                         </div>
                         <div class="ps-3" style="margin-top:15px;">
                     <ul class="list p-0 m-0" style="list-style:none; font-size:15px; line-height:1.7;">
-                                <li>- <a href="modul/kalender.php">Kalender Akademik</a></li>
+                                <li>- <a href="?page=kalender">Kalender Akademik</a></li>
                                 <li>- <a href="modul/matkul.php">Jadwal Kuliah</a></li>
                                 <li>- <a href="modul/pmb.php">Penerima Mahasiswa Baru (S1)</a></li>
                                 <li>- <a href="modul/jurnal.php">E-Journal</a></li>

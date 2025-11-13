@@ -23,6 +23,18 @@ switch ($page) {
       case'dema':
       include"modul/dema.php";
       break;
+      case'mars':
+      include"modul/mars.php";
+      break;
+      case'visimisi':
+      include"modul/visimisi.php";
+      break;
+      case'lambang':
+      include"modul/lambang.php";
+      break;
+      case'kalender':
+      include"modul/kalender.php";
+      break;
   
   default:
     include"modul/home.php";
