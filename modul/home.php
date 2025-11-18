@@ -93,9 +93,9 @@
                         <div class="ps-3" style="margin-top:15px;">
                     <ul class="list p-0 m-0" style="list-style:none; font-size:15px; line-height:1.7;">
                                 <li>- <a href="?page=kalender">Kalender Akademik</a></li>
-                                <li>- <a href="modul/matkul.php">Jadwal Kuliah</a></li>
-                                <li>- <a href="modul/pmb.php">Penerima Mahasiswa Baru (S1)</a></li>
-                                <li>- <a href="modul/jurnal.php">E-Journal</a></li>
+                                <li>- <a href="?page=matkul">Jadwal Kuliah</a></li>
+                                <li>- <a href="?page=pmb">Penerima Mahasiswa Baru (S1)</a></li>
+                                <li>- <a href="?page=jurnal">E-Journal</a></li>
                                 <li>- <a href="https://sister.kemdikbud.go.id/beranda">Sistem Terintegrasi</a></li>
                                 </ul>
                     </div>

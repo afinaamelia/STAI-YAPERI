@@ -9,7 +9,7 @@
     <div class="text-center">
       <h3>Ayo daftarkan segera !!</h3>
       <p>Tata Cara Pendaftaran Mahasiswa/i Baru T.A.<?=$tampil['Tahun Akademik']?></p>
-      <a class="cta-btn" href="bayar.php">klik disini</a>
+      <a class="cta-btn" href="?page=bayar">klik disini</a>
     </div>
   </div>
 </section>

@@ -1,5 +1,5 @@
 
-<div class="container-fluid page-header py-6 my-6 mt-0 wow fadeIn" data-wow-delay="0.1s">
+<div class="container-fluid page-header py-6 my-6 mt-0 wow fadeIn mb-5" data-wow-delay="0.1s">
         <div class="container text-center">
             <h1 class="display-4 text-white animated slideInDown mb-4">Arti Logo Kampus</h1>
             <nav aria-label="breadcrumb animated slideInDown">
@@ -10,17 +10,17 @@
 
 
    <!-- About Logo Start -->
-<section id="about" class="py-6">
-  <div class="container">
-    <div class="row align-items-center g-5">
+<section id="about" class="py-6 mt-5">
+  <div class="container mt-5">
+    <div class="row mt-5 align-items-center g-5">
 
      <!-- Logo Image -->
- <div class="col-lg-6 col-md-12 wow fadeInUp mb-4 mb-lg-0" data-wow-delay="0.5s">
+ <div class="col-lg-6 col-md-12 wow fadeInUp mb-4 mb-lg-0 mt-5" data-wow-delay="0.5s">
     <img src="img/logo1.png" alt="Logo STAI Yaperi" class="logo-img">
   </div>
 
       <!-- Arti Logo -->
-      <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+      <div class="col-lg-6 wow fadeInUp mt-5" data-wow-delay="0.5s">
         <h6 class="text-primary text-uppercase mb-3">Arti Logo</h6>
         <h2 class="mb-4">STAI YAPERI CIBINONG</h2>
 

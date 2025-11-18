@@ -35,6 +35,18 @@ switch ($page) {
       case'kalender':
       include"modul/kalender.php";
       break;
+      case'matkul':
+      include"modul/matkul.php";
+      break;
+      case'pmb':
+      include"modul/pmb.php";
+      break;
+      case'bayar':
+      include"modul/bayar.php";
+      break;
+      case'jurnal':
+      include"modul/jurnal.php";
+      break;
   
   default:
     include"modul/home.php";
