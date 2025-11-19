@@ -113,8 +113,8 @@
                         </div>
                         <div class="ps-3" style="margin-top:15px;">
                     <ul class="list p-0 m-0" style="list-style:none; font-size:15px; line-height:1.7;">
-                                <li>- <a href="modul/beasiswa.php">Beasiswa</a></li>
-                                <li>- <a href="modul/kontak.php">Webmail</a></li>
+                                <li>- <a href="?page=beasiswa">Beasiswa</a></li>
+                                <li>- <a href="?page=kontak">Webmail</a></li>
                                 </ul>
                     </div>
                     </div>

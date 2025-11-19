@@ -12,7 +12,7 @@
 
 ?>
 <!-- Team Start -->
-<div class="team-container">
+<div class="team-container mt-5">
   <div class="team-card">
     <img src="admin/gbr/<?=$tampil['gambar1']?>" alt="Logo 1" class="team-img">
   </div>

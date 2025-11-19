@@ -12,14 +12,14 @@
 
 ?>
    <!-- teachers -->
-<section class="section">
+<section class="section mt-5">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-12">
         <h2 class="section-title" style="text-align:center;">Ketua STAI YAPERI CIBINONG</h2>
       </div>
       <!-- profil ketua -->
-      <div class="col-lg-4 col-sm-8 mb-5 mb-lg-0" style="margin-top:60px;">
+      <div class="col-lg-4 col-sm-8 mb-5 mb-lg-0">
         <div class="leader-card">
           <div class="leader-photo">
             <img src="admin/gbr/<?=$tampil['gambar']?>" alt="Ketua STAI">

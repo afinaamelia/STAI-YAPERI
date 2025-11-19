@@ -47,6 +47,12 @@ switch ($page) {
       case'jurnal':
       include"modul/jurnal.php";
       break;
+      case'beasiswa':
+      include"modul/beasiswa.php";
+      break;
+      case'kontak':
+      include"modul/kontak.php";
+      break;
   
   default:
     include"modul/home.php";
