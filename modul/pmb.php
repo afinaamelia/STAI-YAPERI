@@ -92,24 +92,6 @@
         </div>
       </div>
 
-      <!-- ====== CARD 2 ====== -->
-      <div class="col-12 col-md-6 col-lg-5 mb-4">
-        <div class="program-card">
-          <div class="program-image">
-            <img src="img/hki.jpg" alt="Hukum Keluarga Islam (HKI)">
-          </div>
-          <div class="program-content">
-            <h3>Hukum Keluarga Islam (HKI)</h3>
-            <p>
-              Jurusan Hukum Keluarga Islam mempelajari hukum keluarga berdasarkan prinsip-prinsip Islam: pernikahan, talak, waris, dan hak asasi dalam konteks sosial modern.
-            </p>
-            <p>
-              Lulusan Program Studi HKI memperoleh gelar <strong>S.H.I.</strong> (Sarjana Hukum Islam).
-            </p>
-          </div>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
