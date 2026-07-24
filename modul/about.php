@@ -1,12 +1,10 @@
-    <!-- Page Header Start -->
-    <div class="container-fluid page-header py-6 my-6 mt-0 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container text-center">
-            <h1 class="display-4 text-white animated slideInDown mb-4">About Kampus</h1>
-            <nav aria-label="breadcrumb animated slideInDown">
-            </nav>
-        </div>
+<!-- Page Header Start -->
+<div class="container-fluid page-header wow fadeIn" data-wow-delay="0.1s">
+    <div class="container text-center">
+        <h1 class="text-white">About Kampus</h1>
     </div>
-    <!-- Page Header End -->
+</div>
+<!-- Page Header End -->
 
 
   <!-- About Start -->
