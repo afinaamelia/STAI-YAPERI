@@ -1880,27 +1880,6 @@ footer table {
   }
 }
 
-    .page-header {
-    background: linear-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)), url(../img/ft4.jpg) center center no-repeat;
-    background-size: cover;
-    height: 300px;
-}
-   .page-header h1{
-position: relative;
-top: 100px;
-    
-   }
-    /* Responsif untuk HP, tablet, iPad */
-@media (max-width: 992px) { /* ≤991px = tablet & iPad */
-    .page-header {
-        padding: 5rem 1rem; /* sesuaikan padding */
-    }
-    .page-header h1 {
-        font-size: clamp(1.5rem, 5vw, 2.2rem); /* font menyesuaikan layar */
-        margin-left:-3.4rem ;
-    }
-  }
-
   /* Pastikan peta dan teks sejajar (sampingan) di desktop/tablet */
 h1.display-6 {
   position: relative;
