@@ -15,59 +15,188 @@
 </section>
 <!-- end cta -->
 
-<!-- about pendaftaran -->
-   <section id="about" class="about">
-  <div class="container" data-aos="fade-up">
-    <div class="row">
-      <!-- Kolom Gambar -->
- <div class="col-lg-6 order-1 order-lg-2 img-col" data-aos="fade-left" data-aos-delay="100">
-  <img src="admin/gbr/<?=$tampil['gambar']?>" class="img-fluid" alt="">
-</div>
-      <!-- Kolom Konten -->
-      <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-right" data-aos-delay="100" style="margin-top:100px;">
+<style>
+.about-pmb{
+    padding:80px 0;
+}
 
-        <!-- Bagian Ajakan dan Keunggulan -->
-        <div class="content" style="text-align:left;">
-          <h3>Telah dibuka !!! Penerimaan Mahasiswa/i Baru Tahun Akademik <?=$tampil['Tahun Akademik']?></h3>
-          <p class="fst-italic">
-            Sudah siap melangkah menuju masa depan yang lebih bermakna? 🌟  
-            Yuk, gabung bersama <strong>STAI Yaperi Cibinong</strong> — kampus dengan suasana islami, dosen berpengalaman, dan lingkungan belajar yang nyaman.
-          </p>
+.about-wrapper{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:50px;
+}
 
-          <ul>
-            <li><i class="ri-check-double-line"></i> Islamic Ecosystem — suasana kampus religius & kondusif.</li>
-            <li><i class="ri-check-double-line"></i> Terakreditasi dan diakui secara resmi.</li>
-            <li><i class="ri-check-double-line"></i> Biaya terjangkau dan bisa dicicil.</li>
-            <li><i class="ri-check-double-line"></i> Lokasi strategis di pusat Cibinong.</li>
-            <li><i class="ri-check-double-line"></i> Tersedia Beasiswa Prestasi, KIP, dan Beasiswa Lembaga.</li>
-          </ul>
-            <h6 class="mt-3" style="font-weight: 600;">
-            🎓 Daftarkan diri Anda sekarang dan wujudkan cita-cita bersama STAI Yaperi Cibinong!
-</h6>
+.about-img,
+.about-content{
+    flex:1;
+}
+
+.about-img{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.about-img img{
+    width:100%;
+    max-width:500px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+.about-content h3{
+    font-size:34px;
+    font-weight:700;
+    margin-bottom:20px;
+    line-height:1.4;
+}
+
+.about-content p,
+.about-content li{
+    font-size:17px;
+    line-height:1.7;
+    letter-spacing:0.3px;
+}
+
+.about-content ul{
+    padding-left:20px;
+}
+
+.about-content h4{
+    margin-top:20px;
+}
+
+.about-content h5{
+    margin-top:25px;
+}
+
+/* Tablet */
+@media (max-width:991px){
+
+    .about-wrapper{
+        flex-direction:column;
+    }
+
+    .about-img{
+        order:1;
+    }
+
+    .about-content{
+        order:2;
+        width:100%;
+    }
+
+    .about-img img{
+        max-width:420px;
+    }
+
+    .about-content h3{
+        font-size:28px;
+    }
+}
+
+/* HP */
+@media (max-width:576px){
+
+    .about-pmb{
+        padding:50px 15px;
+    }
+
+    .about-wrapper{
+        gap:25px;
+    }
+
+    .about-img img{
+        max-width:100%;
+        margin-left:-25px;
+    }
+
+    .about-content h3{
+        font-size:20px;
+    }
+
+    .about-content p,
+    .about-content li{
+        font-size:13px;
+        overflow-wrap: break-word;
+    }
+
+    .about-content h4{
+        font-size:22px;
+        overflow-wrap: break-word;
+    }
+
+    .about-content h5{
+        font-size:18px;
+    }
+}
+</style>
+
+<section id="about2" class="about-pmb">
+
+    <div class="container">
+
+        <div class="about-wrapper">
+
+            <!-- Gambar -->
+            <div class="about-img">
+                <img src="admin/gbr/<?=$tampil['gambar']?>" alt="">
+            </div>
+
+            <!-- Teks -->
+            <div class="about-content">
+
+                <h3>
+                    Telah dibuka !!! Penerimaan Mahasiswa/i Baru Tahun Akademik
+                    <?=$tampil['Tahun Akademik']?>
+                </h3>
+
+                <p>
+                    Sudah siap melangkah menuju masa depan yang lebih bermakna? 🌟
+                    Yuk, gabung bersama <b>STAI Yaperi Cibinong</b> — kampus dengan suasana islami,
+                    dosen berpengalaman, dan lingkungan belajar yang nyaman.
+                </p>
+
+                <ul>
+                    <li>Islamic Ecosystem — suasana kampus religius & kondusif.</li>
+                    <li>Terakreditasi dan diakui secara resmi.</li>
+                    <li>Biaya kuliah terjangkau dan bisa dicicil.</li>
+                    <li>Lokasi strategis di pusat Cibinong.</li>
+                    <li>Tersedia Beasiswa Prestasi, KIP, dan Beasiswa Lembaga.</li>
+                </ul>
+
+                <h5>
+                    🎓 Daftarkan diri Anda sekarang dan wujudkan cita-cita bersama STAI Yaperi Cibinong!
+                </h5>
+
+                <hr>
+
+                <h4>📋 Informasi Pendaftaran</h4>
+
+                <p>📞 08515-697-697-4 (Admin Pendaftaran)</p>
+
+                <p>
+                    📍 <b>Sekretariat Pendaftaran</b><br>
+                    Jl. Raya Jakarta Bogor KM.45, Pakansari,
+                    Cibinong, Kab. Bogor 16915
+                </p>
+
+                <p>🕒 Senin - Sabtu : 10.00 – 17.00 WIB</p>
+
+            </div>
+
         </div>
-        <!-- Bagian Informasi Pendaftaran -->
-        <div class="info-daftar">
-          <h5 class="fst-italic">📋 Informasi Pendaftaran:</h5>
-          <ul>
-            <li style="margin-bottom: 0.5rem;">📞 08515-697-697-4 (Admin Pendaftaran)</li>
-            <li style="margin-bottom: 0.5rem;">
-              📍 <strong>Sekretariat Pendaftaran:</strong><br>
-              Jl. Raya Jakarta Bogor KM.45, Pakansari, Cibinong, Kab. Bogor 16915
-            </li>
-            <li>🕒 Senin - Sabtu: 10.00 – 17.00 WIB</li>
-          </ul>
-         </div>
 
-      </div>
     </div>
-  </div>
-</section>
-      <!-- end about -->
 
+</section>
+
+</section>
 <!-- ====== PROGRAM STUDI SECTION ====== -->
 <section id="blog" class="blog section bg-light"  data-aos="fade-up">
   <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s">
-    <h1 class="display-6 mb-1">Program Studi STAI YAPERI CIBINONG</h1>
+    <h1 class="display-6 mb-1" style="font-size:21px;">Program Studi STAI YAPERI CIBINONG</h1>
   </div>
 
   <div class="container">
