@@ -4,18 +4,161 @@
 
 ?>
 
-<section id="cta" class="cta" style="margin-top:-1.4375rem;"> <!-- -23px = -1.4375rem -->
-  <div class="container" data-aos="zoom-in">
-    <div class="text-center">
-      <h3>Ayo daftarkan segera !!</h3>
-      <p>Tata Cara Pendaftaran Mahasiswa/i Baru T.A.<?=$tampil['Tahun Akademik']?></p>
-      <a class="cta-btn" href="?page=bayar">klik disini</a>
+<section id="register-banner">
+    <div class="banner-overlay"></div>
+
+    <div class="banner-content">
+        <h3>Ayo daftarkan segera !!</h3>
+        <p>Tata Cara Pendaftaran Mahasiswa/i Baru T.A. <?=$tampil['Tahun Akademik']?></p>
+
+        <a href="?page=bayar" class="banner-btn">
+            Klik Disini
+        </a>
     </div>
-  </div>
 </section>
-<!-- end cta -->
 
 <style>
+    /* ==========================
+   REGISTER BANNER
+========================== */
+
+#register-banner{
+    position: relative;
+    min-height: 220px; /* sebelumnya 450px */
+
+    background-image: url("img/ft4.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#register-banner::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75); /* Hitam transparan */
+}
+
+#register-banner .banner-content{
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+}
+
+#register-banner .banner-btn{
+    display: inline-block;
+    margin-top: 15px;
+    padding: 14px 35px;
+    background: #ffc107;
+    color: #000;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .3s;
+}
+
+#register-banner .banner-btn:hover{
+    background: #fff;
+}
+#register-banner h3{
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700; /* Tebal (bold) */
+    margin-bottom: 3px;
+}
+
+#register-banner p{
+    color: #fff;
+    font-size: 1.45rem;
+    font-weight: 400; /* Normal */
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+/* =========================
+   Responsive
+========================= */
+
+/* Tablet */
+@media (max-width: 992px) {
+    #register-banner{
+        min-height: 200px;
+    }
+
+    #register-banner .banner-content{
+        padding: 18px;
+    }
+
+    #register-banner h3{
+        font-size: 1.8rem;
+    }
+
+    #register-banner p{
+        font-size: 1.2rem;
+    }
+
+    #register-banner .banner-btn{
+        padding: 12px 30px;
+        font-size: 0.95rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    #register-banner{
+        min-height: 180px;
+        background-position: center;
+    }
+
+    #register-banner .banner-content{
+        padding: 15px;
+    }
+
+    #register-banner h3{
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+    }
+
+    #register-banner p{
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    #register-banner .banner-btn{
+        margin-top: 12px;
+        padding: 10px 25px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Mobile kecil */
+@media (max-width: 480px) {
+    #register-banner{
+        min-height: 160px;
+    }
+
+    #register-banner .banner-content{
+        padding: 12px;
+    }
+
+    #register-banner h3{
+        font-size: 1.2rem;
+    }
+
+    #register-banner p{
+        font-size: 0.7rem;
+    }
+
+    #register-banner .banner-btn{
+        padding: 9px 20px;
+        font-size: 0.65rem;
+    }
+}
 .about-pmb{
     padding:80px 0;
 }
@@ -46,7 +189,7 @@
 }
 
 .about-content h3{
-    font-size:34px;
+    font-size:26px;
     font-weight:700;
     margin-bottom:20px;
     line-height:1.4;
@@ -54,7 +197,7 @@
 
 .about-content p,
 .about-content li{
-    font-size:17px;
+    font-size:15px;
     line-height:1.7;
     letter-spacing:0.3px;
 }

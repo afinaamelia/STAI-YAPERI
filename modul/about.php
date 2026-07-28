@@ -1,13 +1,12 @@
 <!-- Page Header Start -->
-<div class="container-fluid page-header wow fadeIn" data-wow-delay="0.1s">
-    <div class="container text-center">
-        <h1 class="display-4 text-white animated slideInDown mb-4">
-            About Kampus
-        </h1>
-        <nav aria-label="breadcrumb animated slideInDown">
-        </nav>
-    </div>
-</div>
+<section id="PageHeader" class="page-header1">
+    <div class="banner-overlay"></div>
+
+    <div class="banner-content">
+       <h3>Tentang Kami</h3>
+                   </div>
+</section>
+
 <!-- Page Header End -->
 
 
@@ -38,11 +37,6 @@
               <i class="fa fa-book-open text-primary me-2 align-middle"></i>
               <strong  class="align-middle">Pendidikan Agama Islam (S.Pd)</strong>
               <span class="ketua">Ketua Program Studi: Tb. Maulana Setiaki, S.Pd.I, M.SI</span>
-            </li>
-            <li>
-              <i class="fa fa-balance-scale text-primary me-2 align-middle"></i>
-              <strong  class="align-middle">Hukum Kekeluargaan Islam (SH)</strong>
-              <span class="ketua">Ketua Program Studi: Raden H. Roby Samsi, S.Ag, M.Pd</span>
             </li>
           </ul>
 

@@ -59,6 +59,7 @@ html, body {
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
+
 .navbar-brand span {
   color: #222;
 }
@@ -1051,21 +1052,6 @@ Responsive untuk layar kecil (HP & tablet)
     overflow-x: hidden;
   }
 }
- .page-header {
-    background: linear-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)), url(../img/ft4.jpg) center center no-repeat;
-    background-size: cover;
-}
-/* Responsif untuk HP, tablet, iPad */
-@media (max-width: 992px) { /* ≤991px = tablet & iPad */
-    .page-header {
-        padding: 5rem 1rem; /* sesuaikan padding */
-    }
-    .page-header h1 {
-        font-size: clamp(1.5rem, 5vw, 2.2rem); /* font menyesuaikan layar */
-        margin-left:-3.4rem ;
-    }
-}
-
 /* ====== BAGIAN UTAMA #ABOUT ====== */
 
 /* Layout utama */
@@ -1185,8 +1171,8 @@ Responsive untuk layar kecil (HP & tablet)
 
   /* Paragraf rapat */
   #about p.rapat {
-    font-size: clamp(0.85rem, 2.5vw, 1rem);
-    line-height: 1.4;
+    font-size: clamp(0.80rem, 2.5vw, 1rem);
+    line-height: 1.2;
     margin: 0 auto 0.6rem auto;
     padding: 0 0.75rem; /* dikurangin sedikit */
     text-align: justify;
@@ -1980,3 +1966,107 @@ h1.display-6::after {
       position: relative;
       top: -50px;
     }
+
+    /* START CSS PageHeader */
+     #PageHeader{
+    position: relative;
+    min-height: 220px; /* sebelumnya 450px */
+
+    background-image: url("img/ft4.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#PageHeader::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75); /* Hitam transparan */
+}
+
+#PageHeader .banner-content{
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+}
+
+#PageHeader .banner-btn{
+    display: inline-block;
+    margin-top: 15px;
+    padding: 14px 35px;
+    background: #ffc107;
+    color: #000;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .3s;
+}
+
+#PageHeader .banner-btn:hover{
+    background: #fff;
+}
+#PageHeader h3{
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700; /* Tebal (bold) */
+    margin-bottom: 3px;
+}
+/* =========================
+   Responsive
+========================= */
+
+/* Tablet */
+@media (max-width: 992px) {
+    #PageHeader{
+        min-height: 200px;
+    }
+
+    #PageHeader .banner-content{
+        padding: 18px;
+    }
+
+    #PageHeader h3{
+        font-size: 1.8rem;
+    }
+
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    #PageHeader{
+        min-height: 180px;
+        background-position: center;
+    }
+
+    #PageHeader .banner-content{
+        padding: 15px;
+    }
+
+    #PageHeader h3{
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+    }
+}
+
+/* Mobile kecil */
+@media (max-width: 480px) {
+    #PageHeader{
+        min-height: 160px;
+    }
+
+    #PageHeader .banner-content{
+        padding: 12px;
+    }
+
+    #PageHeader h3{
+        font-size: 1.2rem;
+    }
+}
+/* END CSS PageHeader */

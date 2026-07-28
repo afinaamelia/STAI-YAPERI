@@ -6,7 +6,7 @@
 
             <!-- Slide 1 -->
             <div class="carousel-item active">
-                <img class="w-100" src="img/gradu.jpg" alt="Image" style="height:80vh; width:100%; object-fit: cover;">
+               <img class="w-100 carousel-img" src="img/gradu.jpg" alt="Image">
                 <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
                     <h1 class="text-light animated slideInDown text-center" 
                         style="font-size: clamp(1.5rem, 3vw, 2.5rem); font-family: Montserrat; line-height: 1.3;">
@@ -18,7 +18,7 @@
 
            <!-- Slide 2 -->
 <div class="carousel-item">
-    <img class="w-100" src="img/wisuda1.jpg" alt="Image" style="height:80vh; width:100%; object-fit:cover;">
+<img class="w-100 carousel-img" src="img/wisuda1.jpg" alt="Image">
     <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
         <h1 class="text-light animated slideInDown text-center" 
             style="font-size:clamp(1.5rem, 3vw, 2.5rem); font-family:Bebas Neue; line-height: 1.3;">

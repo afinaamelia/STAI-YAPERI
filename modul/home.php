@@ -1,4 +1,5 @@
-   <div class="container-fluid p-0 wow fadeIn" data-wow-delay="0.1s">
+
+<div class="container-fluid p-0 wow fadeIn" data-wow-delay="0.1s">
     <div id="header-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
         <div class="carousel-inner">
 
@@ -154,12 +155,7 @@
               <strong  class="align-middle">Pendidikan Agama Islam (S.Pd)</strong>
               <span class="ketua">Ketua Program Studi: Tb. Maulana Setiaki, S.Pd.I, M.SI</span>
             </li>
-            <li>
-              <i class="fa fa-balance-scale text-primary me-2 align-middle"></i>
-              <strong  class="align-middle">Hukum Kekeluargaan Islam (SH)</strong>
-              <span class="ketua">Ketua Program Studi: Raden H. Roby Samsi, S.Ag, M.Pd</span>
-            </li>
-          </ul>
+                  </ul>
 
           <!-- Fitur -->
           <h5 class="text-dark fw-bold">Fasilitas & Layanan</h5>

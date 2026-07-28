@@ -76,15 +76,14 @@
 <!-- Navbar Start -->
 <nav class="navbar navbar-expand-lg navbar-light sticky-top shadow-sm">
   <a href="index.php" class="navbar-brand d-flex align-items-center border-end px-4 px-lg-5">
-    <img src="img/logo1.png" width="78" alt="Logo" class="me-2">
-    <span class="fs-2 fw-bold m-0">STAI YAPERI</span>
+    <img src="img/logo1.png" alt="Logo" class="logo-navbar me-2">
+    <span class="brand-text fw-bold m-0">STAI YAPERI CIBINONG</span>
   </a>
 
   <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <!-- Navbar Menu -->
   <div class="collapse navbar-collapse" id="navbarCollapse">
     <div class="navbar-nav ms-auto me-4 p-4 p-lg-0">
       <a href="index.php" class="nav-item nav-link active mx-2">Beranda</a>
@@ -95,3 +94,112 @@
     </div>
   </div>
 </nav>
+<style>
+  /* Desktop */
+.logo-navbar{
+    width:78px;
+}
+
+.brand-text{
+    font-size:1.75rem;
+}
+
+/* Laptop */
+@media (max-width:1200px){
+
+    .logo-navbar{
+        width:60px;
+    }
+
+    .brand-text{
+        font-size:1.3rem;
+    }
+
+    .navbar-nav .nav-link{
+        font-size:15px;
+        margin:0 6px !important;
+    }
+
+}
+
+/* Tablet */
+@media (max-width:992px){
+
+    .logo-navbar{
+        width:50px;
+    }
+
+    .brand-text{
+        font-size:1.1rem;
+    }
+
+    .navbar-brand{
+        padding-left:15px !important;
+        padding-right:15px !important;
+        border-right:none !important;
+    }
+
+    .navbar-toggler{
+        margin-right:15px !important;
+    }
+
+    .navbar-collapse{
+        background:#fff;
+        margin-top:10px;
+        padding:10px;
+        border-radius:10px;
+    }
+
+}
+
+/* Mobile */
+@media (max-width:576px){
+
+    .logo-navbar{
+        width:42px;
+    }
+
+    .brand-text{
+        font-size:.95rem;
+    }
+
+    .navbar-brand{
+        padding-left:10px !important;
+        padding-right:10px !important;
+    }
+
+    .navbar-toggler{
+        padding:4px 6px;
+        margin-right:10px !important;
+    }
+
+    .navbar-toggler-icon{
+        width:18px;
+        height:18px;
+    }
+
+}
+
+/* Mobile S (320px) */
+@media (max-width:320px){
+
+    .logo-navbar{
+        width:38px;
+    }
+
+    .brand-text{
+        font-size:.82rem;
+    }
+
+    .navbar-brand{
+        padding-left:8px !important;
+        padding-right:8px !important;
+    }
+
+    .navbar-toggler{
+        margin-right:8px !important;
+        padding:3px 5px;
+    }
+
+}
+</style>
