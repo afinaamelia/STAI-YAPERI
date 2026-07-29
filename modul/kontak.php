@@ -1,12 +1,117 @@
-  <div class="container-fluid page-header py-6 my-6 mt-0 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container text-center">
-            <h1 class="display-4 text-white animated slideInDown mb-4">Kontak Kampus</h1>
-            <nav aria-label="breadcrumb animated slideInDown">
-            </nav>
-        </div>
-    </div>
-    <!-- Page Header End -->
+<!-- Page Header Start -->
+<section id="PageHeader" class="page-header1">
+    <div class="banner-overlay"></div>
 
+    <div class="banner-content">
+       <h3>KKontak Kampus</h3>
+                   </div>
+</section>
+<style>
+ /* START CSS PageHeader */
+     #PageHeader{
+    position: relative;
+    min-height: 220px; /* sebelumnya 450px */
+
+    background-image: url("img/ft4.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#PageHeader::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75); /* Hitam transparan */
+}
+
+#PageHeader .banner-content{
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+}
+
+#PageHeader .banner-btn{
+    display: inline-block;
+    margin-top: 15px;
+    padding: 14px 35px;
+    background: #ffc107;
+    color: #000;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .3s;
+}
+
+#PageHeader .banner-btn:hover{
+    background: #fff;
+}
+#PageHeader h3{
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700; /* Tebal (bold) */
+    margin-bottom: 3px;
+}
+/* =========================
+   Responsive
+========================= */
+
+/* Tablet */
+@media (max-width: 992px) {
+    #PageHeader{
+        min-height: 200px;
+    }
+
+    #PageHeader .banner-content{
+        padding: 18px;
+    }
+
+    #PageHeader h3{
+        font-size: 1.8rem;
+    }
+
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    #PageHeader{
+        min-height: 180px;
+        background-position: center;
+    }
+
+    #PageHeader .banner-content{
+        padding: 15px;
+    }
+
+    #PageHeader h3{
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+    }
+}
+
+/* Mobile kecil */
+@media (max-width: 480px) {
+    #PageHeader{
+        min-height: 160px;
+    }
+
+    #PageHeader .banner-content{
+        padding: 12px;
+    }
+
+    #PageHeader h3{
+        font-size: 1.2rem;
+    }
+}
+/* END CSS PageHeader */
+</style>
+<!-- Page Header End -->
     <!-- Contact Start -->
 <div class="container-xxl py-6 mt-5">
   <div class="container">

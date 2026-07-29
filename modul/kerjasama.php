@@ -113,267 +113,331 @@
 </style>
 <!-- Page Header End -->
 
-<!-- About Start -->
- <section class="kerjasama">
+<section class="kerjasama-section">
     <div class="container">
-        <div class="kerjasama-wrapper">
+
+        <div class="kerjasama-box">
 
             <!-- Gambar -->
-            <div class="kerjasama-img">
+            <div class="kerjasama-image">
                 <img src="img/bg1.png" alt="Kerja Sama STAI YAPERI">
             </div>
 
             <!-- Konten -->
-            <div class="kerjasama-content">
-                <h6>KERJA SAMA</h6>
+            <div class="kerjasama-text">
+
+                <span class="sub-title">KERJA SAMA</span>
 
                 <h2>
-                    STAI YAPERI Cibinong Menjalin Kemitraan Strategis
+                    STAI Yaperi Cibinong Menjalin
+                    <span>Kemitraan Strategis</span>
                 </h2>
 
                 <p>
                     STAI Yaperi Cibinong menjalin kerja sama dengan Pemerintah Daerah Kabupaten Bogor sebagai upaya memperkuat peran perguruan tinggi dalam pembangunan daerah. Kolaborasi ini meliputi bidang pendidikan, penelitian, serta pengabdian kepada masyarakat.
                 </p>
 
-                <ul>
-                    <li>✔ Pendidikan</li>
-                    <li>✔ Penelitian</li>
-                    <li>✔ Pengabdian kepada Masyarakat</li>
-                    <li>✔ Pengembangan SDM</li>
-                </ul>
+                <div class="kerjasama-list">
 
-                <a href="#" class="btn-kerjasama">Selengkapnya</a>
+                    <div class="item">
+                        <span>✓</span>
+                        Pendidikan
+                    </div>
+
+                    <div class="item">
+                        <span>✓</span>
+                        Penelitian
+                    </div>
+
+                    <div class="item">
+                        <span>✓</span>
+                        Pengabdian kepada Masyarakat
+                    </div>
+
+                    <div class="item">
+                        <span>✓</span>
+                        Pengembangan SDM
+                    </div>
+
+                </div>
+
+                <a href="#" class="btn-kerjasama">
+                    Selengkapnya →
+                </a>
+
             </div>
 
         </div>
+
     </div>
 </section>
+
 <style>
-  .kerjasama{
-    padding:80px 0;
-    background:#fff;
+
+/* ==========================
+      KERJASAMA
+========================== */
+
+.kerjasama-section{
+    padding:90px 0;
+    background:#f8f9fc;
 }
 
-.kerjasama-wrapper{
+.kerjasama-box{
     display:flex;
     align-items:center;
-    gap:60px;
+    gap:70px;
 }
 
-.kerjasama-img{
-    flex: 0 0 40%;
-    text-align: center;
-}
-
-.kerjasama-img img{
-    width: 300px;
-    max-width: 420px;   /* Ubah sesuai selera */
-    height: auto;
-    border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.12);
-}
-.kerjasama-content{
+.kerjasama-image{
     flex:1;
+    display:flex;
+    justify-content:center;
 }
 
-.kerjasama-content h6{
+.kerjasama-image img{
+    width:100%;
+    max-width:380px;
+    background:#fff;
+    padding:20px;
+    border-radius:24px;
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+    border:1px solid rgba(0,0,0,.05);
+}
+
+.kerjasama-text{
+    flex:2;
+}
+
+.sub-title{
+    display:inline-block;
     color:#ffc107;
-    text-transform:uppercase;
-    letter-spacing:2px;
-    margin-bottom:10px;
-}
-
-.kerjasama-content h2{
-    font-size:35px;
+    font-size:14px;
     font-weight:700;
-    margin-bottom:20px;
-}
-
-.kerjasama-content p{
-    max-width:550px;
-    text-align:justify;
-    line-height:1.8;
-    color:#555;
-}
-.kerjasama-content p{
-    max-width:550px;
-    text-align:justify;
-    text-justify:inter-word;
-    line-height:1.8;
-    color:#555;
-    margin-bottom:20px;
-}
-.kerjasama-content ul{
-    list-style:none;
-    padding:0;
-    margin:25px 0;
-}
-
-.kerjasama-content li{
+    letter-spacing:2px;
     margin-bottom:12px;
+}
+
+.kerjasama-text h2{
+    font-size:30px;
+    line-height:1.2;
+    font-weight:700;
+    margin-bottom:18px;
+    color:#222;
+}
+
+.kerjasama-text h2 span{
+    display:block;
+}
+
+.kerjasama-text h2::after{
+    content:"";
+    display:block;
+    width:300px;
+    height:2px;
+    background:#ffc107;
+    border-radius:20px;
+    margin-top:10px;
+}
+
+.kerjasama-text p{
     font-size:15px;
+    line-height:1.9;
+    color:#666;
+    text-align:justify;
+    margin-bottom:28px;
+}
+
+/* LIST */
+
+.kerjasama-list{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+    margin-bottom:35px;
+}
+
+.item{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    background:#fff;
+    padding:14px 18px;
+    border-radius:12px;
+    box-shadow:0 6px 18px rgba(0,0,0,.06);
+    font-weight:600;
+     font-size:15px;
+}
+
+.item span{
+    width:30px;
+    height:30px;
+    background:#ffc107;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+   
 }
 
 .btn-kerjasama{
     display:inline-block;
-    padding:12px 28px;
     background:#ffc107;
-    color:#fff;
-    text-decoration:none;
+    color:#222;
+    padding:14px 30px;
     border-radius:50px;
+    text-decoration:none;
+    font-weight:600;
     transition:.3s;
 }
 
 .btn-kerjasama:hover{
-    Color:#000;
-}
-/* =========================
-   Laptop (≤ 1200px)
-========================= */
-@media (max-width:1200px){
-
-    .kerjasama-wrapper{
-        gap:40px;
-    }
-
-    .kerjasama-img img{
-        width:260px;
-    }
-
-    .kerjasama-content h2{
-        font-size:30px;
-    }
-
-    .kerjasama-content p{
-        max-width:100%;
-    }
+    background:#222;
+    color:#fff;
 }
 
-/* =========================
-   Tablet (≤ 992px)
-========================= */
-@media (max-width:992px){
+/* ==========================
+      Tablet
+========================== */
 
-    .kerjasama{
-        padding:60px 0;
-    }
+@media(max-width:992px){
 
-    .kerjasama-wrapper{
-        flex-direction:column;
-        text-align:center;
-        gap:35px;
-    }
-
-    .kerjasama-img{
-        flex:unset;
-    }
-
-    .kerjasama-img img{
-        width:250px;
-    }
-
-    .kerjasama-content{
-        width:100%;
-    }
-
-    .kerjasama-content h2{
-        font-size:28px;
-    }
-
-.kerjasama-content p{
-    max-width:550px;
-    text-align:justify;
-    text-justify:inter-word;
-    line-height:1.8;
-    color:#555;
-    margin-bottom:20px;
+.kerjasama-section{
+    padding:70px 0;
 }
-.kerjasama-content ul{
+
+.kerjasama-box{
+    flex-direction:column;
+    gap:40px;
+}
+
+.kerjasama-image{
+    flex:1;
+    display:flex;
+    justify-content:center;
+}
+
+.kerjasama-image img{
     width:100%;
-    padding-left:0;
-    margin:20px 0;
+    max-width:380px;
+    background:#fff;
+    padding:20px;
+    border-radius:24px;
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+    border:1px solid rgba(0,0,0,.05);
 }
 
-.kerjasama-content li{
-    text-align:left;
-}
-.kerjasama-content{
-    text-align:left;
-}
+.kerjasama-text{
+    width:100%;
 }
 
-/* =========================
-   Mobile (≤ 768px)
-========================= */
-@media (max-width:768px){
-
-    .kerjasama{
-        padding:50px 20px;
-    }
-
-    .kerjasama-wrapper{
-        gap:25px;
-    }
-
-    .kerjasama-img img{
-        width:220px;
-    }
-
-    .kerjasama-content h6{
-        font-size:14px;
-    }
-
-    .kerjasama-content h2{
-        font-size:24px;
-        line-height:1.4;
-    }
-
-    .kerjasama-content p{
-        font-size:15px;
-        line-height:1.8;
-    }
-
-    .kerjasama-content li{
-        font-size:15px;
-    }
-
-    .btn-kerjasama{
-        padding:10px 22px;
-        font-size:15px;
-    }
+.kerjasama-text h2{
+    font-size:30px;
 }
 
-/* =========================
-   Mobile Kecil (≤ 480px)
-========================= */
-@media (max-width:480px){
+.kerjasama-text h2::after{
+    width:140px;
+}
 
-    .kerjasama{
-        padding:40px 15px;
-    }
+.kerjasama-list{
+    grid-template-columns:1fr 1fr;
+}
 
-    .kerjasama-img img{
-        width:180px;
-    }
+}
 
-    .kerjasama-content h2{
-        font-size:21px;
-    }
+/* ==========================
+      Mobile
+========================== */
 
-    .kerjasama-content p{
-        font-size:14px;
-    }
+@media(max-width:768px){
 
-    .kerjasama-content li{
-        font-size:14px;
-    }
+.kerjasama-box{
+    width:92%;
+    padding:0 15px;
+    box-sizing:border-box;
+}
+
+.kerjasama-section{
+    padding:60px 0;
+    
+}
+
+.kerjasama-image img{
+    max-width:240px;
+}
+
+.kerjasama-text h2{
+    font-size:15px;
+}
+
+.kerjasama-text p{
+    font-size:15px;
+}
+
+.kerjasama-list{
+    grid-template-columns:1fr;
+}
+
+.item{
+    padding:13px 15px;
+}
 
 .btn-kerjasama{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    padding:10px 22px;
+    width:90%;
+    text-align:center;
 }
+
 }
+
+/* ==========================
+      Mobile S
+========================== */
+
+@media(max-width:480px){
+
+.container{
+    padding-left:18px;
+    padding-right:18px;
+}
+
+.kerjasama-section{
+    padding:50px 0;
+}
+
+.kerjasama-image img{
+    max-width:190px;
+}
+
+.sub-title{
+    font-size:10px;
+}
+
+.kerjasama-text h2{
+    font-size:17px;
+    margin-top:-8px;
+}
+
+.kerjasama-text h2::after{
+    margin-top:6px;
+    width:250px;
+    height:2px;
+}
+
+.kerjasama-text p{
+    font-size:13px;
+    line-height:1.7;
+}
+
+.item{
+    font-size:12px;
+}
+
+.btn-kerjasama{
+    padding:12px;
+    font-size:13px;
+}
+
+}
+
 </style>
-<!-- About End -->
