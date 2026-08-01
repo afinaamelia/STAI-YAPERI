@@ -13,9 +13,8 @@
          class="footer1-logo img-fluid">
 
 </div>
-
             <!-- Kontak -->
-            <div class="col-lg-3 col-md-6">
+          <div class="col-lg-3 col-md-6 footer1-contact">
 
                 <h5 class="footer1-title">
                     Kontak
@@ -325,12 +324,13 @@
    Tablet (992px ke bawah)
 ========================================== */
 @media (max-width:991.98px){
-
-    .footer1-logo{
-        max-width:220px;
-        margin:0 0 25px 0; /* rata kiri */
-    }
-
+   .footer1-logo{
+    width:100%;
+    max-width:400px;
+    height:auto;
+    display:block;
+    margin:0;
+}
     .footer1-title,
     .footer2-title{
         text-align:left;
@@ -347,6 +347,9 @@
         margin:0;
         max-width:100%;
     }
+       .footer1-contact{
+        margin-top:-5px;
+    }
 
 }
 /* ==========================================
@@ -354,9 +357,12 @@
 ========================================== */
 @media (max-width:767.98px){
 
+    .footer1-contact{
+        margin-top:-5px;
+    }
     .footer1-logo{
     width:100%;
-    max-width:820px;
+    max-width:800px;
     height:auto;
     display:block;
     margin:0;
@@ -380,12 +386,67 @@
     }
 
     .footer1-hours-item{
-        width:100%;
+        width:70%;
         flex-direction:row; /* tetap sejajar */
         justify-content:space-between;
         align-items:center;
+        margin-left:-10px;
+    }
+.footer1-hours-item::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%; /* panjang garis */
+    height: 1px;
+    background: rgba(202, 196, 196, 0.75);
+}
+.footer1-title::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-8px;
+    width:67px;
+    height:2px;
+    background:#ffc107;
+    border-radius:20px;
+}
+.footer2-title::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-8px;
+    width:150px;
+    height:2px;
+    background:#ffc107;
+    border-radius:20px;
+}
+
+ .footer1-bottom-content{
+        display:flex;
+        flex-direction:column;
+        align-items:flex-start;
+        text-align:left;
+        gap:15px;
     }
 
+    .footer1-bottom-content p{
+        order:2;
+        font-size:8px;
+        width:100%;
+    }
+
+    .footer1-social{
+        order:1;
+        display:flex;
+        justify-content:flex-start;
+        width:100%;
+    }
+.footer1-social a{
+    width:35px;
+    height:35px;
+    font-size:12px;
+}
 }
 /* ==========================================
    Mobile Kecil (480px ke bawah)
@@ -397,7 +458,7 @@
     }
 
     .footer1-logo{
-    max-width:320px;
+    max-width:300px;
     height:auto;
     display:block;
     margin:0;
@@ -406,33 +467,18 @@
 
     .footer1-title,
     .footer2-title{
-        font-size:22px;
+        font-size:18px;
     }
 
     .footer1-list li{
-        font-size:14px;
+        font-size:12px;
     }
 
     .footer1-hours-item span,
     .footer1-hours-item strong{
-        font-size:14px;
+        font-size:12px;
     }
-     .footer1-bottom-content{
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        text-align:center;
-        gap:15px;
-    }
-
-    .footer1-bottom-content p{
-        order:1;
-    }
-
-    .footer1-social{
-        order:2;
-        justify-content:center;
-    }
+    
 
 }
 </style>

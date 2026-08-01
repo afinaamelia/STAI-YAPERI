@@ -1,32 +1,119 @@
 
 
-    <!-- Page Header Start -->
+ <!-- Page Header Start -->
+<section id="PageHeader" class="page-header1">
+    <div class="banner-overlay"></div>
+
+    <div class="banner-content">
+       <h3> Mars & Hymne </h3>
+                   </div>
+</section>
 <style>
-    .page-header {
-    background: linear-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)), url(img/ft4.jpg) center center no-repeat;
+ /* START CSS PageHeader */
+     #PageHeader{
+    position: relative;
+    min-height: 220px; /* sebelumnya 450px */
+
+    background-image: url("img/ft4.jpg");
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-/* Responsif untuk HP, tablet, iPad */
-@media (max-width: 992px) { /* ≤991px = tablet & iPad */
-    .page-header {
-        padding: 5rem 1rem; /* sesuaikan padding */
+
+#PageHeader::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75); /* Hitam transparan */
+}
+
+#PageHeader .banner-content{
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+}
+
+#PageHeader .banner-btn{
+    display: inline-block;
+    margin-top: 15px;
+    padding: 14px 35px;
+    background: #ffc107;
+    color: #000;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .3s;
+}
+
+#PageHeader .banner-btn:hover{
+    background: #fff;
+}
+#PageHeader h3{
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700; /* Tebal (bold) */
+    margin-bottom: 3px;
+}
+/* =========================
+   Responsive
+========================= */
+
+/* Tablet */
+@media (max-width: 992px) {
+    #PageHeader{
+        min-height: 200px;
     }
-    .page-header h1 {
-        font-size: clamp(1.5rem, 5vw, 2.2rem); /* font menyesuaikan layar */
-        margin-left:-3.4rem ;
+
+    #PageHeader .banner-content{
+        padding: 18px;
+    }
+
+    #PageHeader h3{
+        font-size: 1.8rem;
+    }
+
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    #PageHeader{
+        min-height: 180px;
+        background-position: center;
+    }
+
+    #PageHeader .banner-content{
+        padding: 15px;
+    }
+
+    #PageHeader h3{
+        font-size: 1.5rem;
+        margin-bottom: 5px;
     }
 }
 
-    </style>
+/* Mobile kecil */
+@media (max-width: 480px) {
+    #PageHeader{
+        min-height: 160px;
+    }
 
-    <div class="container-fluid page-header py-6 my-6 mt-0 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container text-center">
-            <h1 class="display-4 text-white animated slideInDown mb-4">Mars & Hmyne Kampus</h1>
-            <nav aria-label="breadcrumb animated slideInDown">
-            </nav>
-        </div>
-    </div>
-    <!-- Page Header End -->
+    #PageHeader .banner-content{
+        padding: 12px;
+    }
+
+    #PageHeader h3{
+        font-size: 1.2rem;
+    }
+}
+/* END CSS PageHeader */
+</style>
+<!-- Page Header End -->
 
   <!-- START SECTION: MARS & HYMNE -->
 <section id="mars-hymne" class="py-5 mt-5">
@@ -174,14 +261,15 @@
 }
 
 /* Card dan layout */
-.mars-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
-  margin-top: -2rem;
-  margin-left:-1rem;
+.mars-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+    padding:20px;
+
+    margin-top:0;      /* HAPUS -2rem */
+    margin-left:0;     /* HAPUS -1rem */
 }
 .mars-card {
   flex: 1 1 45%;      /* sama seperti card Mars lainnya */
@@ -212,27 +300,34 @@
   content: "";
   position: absolute;
   left: 50%;
-  bottom: -6px;
+  bottom: -8px;
   transform: translateX(-50%);
-  width: 60%;
-  height: 3px;
+  width: 100%;
+  height: 2px;
   background-color: #ffc107;
   border-radius: 10%;
 }
 
 /* Lirik */
-.quote-post p {
-  margin: 4px 0;
-  line-height: 1.4;
-  text-align: center;
-}
-.mars2 blockquote {
-  margin: 0 0 1rem 0;
-  padding: 0;
-  border-left: 4px solid #ffc107;
-  padding-left: 10px;
+.mars2{
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* blok lirik tetap di tengah */
 }
 
+.mars2 blockquote{
+    width: 100%;
+    max-width: 340px; /* lebar teks */
+    margin: 0 0 1.2rem;
+    padding-left: 14px;
+    border-left: 4px solid #ffc107;
+}
+
+.quote-post p{
+    margin: 4px 0;
+    line-height: 1.6;
+    text-align: left; /* teks rata kiri */
+}
 /* HP layout */
 .card {
   border-radius: 10px;
@@ -247,62 +342,92 @@
     margin: 0 auto; /* pastikan tidak ada margin negatif */
     margin-left:-0.5rem;
 }
-@media (max-width: 992px) {
-  .mars-card {
-    flex: 1 1 80%;
-    max-width: 80%;
-    padding: 20px;
-  }
+@media (max-width:992px){
 
-  .mars h2 {
-    font-size: 1.2rem;
-  }
+    .mars2 blockquote{
+        max-width:300px;
+    }
 
-  .quote-post p {
-    font-size: 0.95rem;
-  }
+    .quote-post p{
+        font-size:0.95rem;
+        line-height:1.5;
+    }
+
 }
+@media (max-width:768px){
+ .quote-post p{
+        font-size:0.75rem;
+        line-height:1.5;
+    }
+    .mars-container{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        gap:15px;
+        padding:0 15px;
+        margin:0;
+    }
 
-/* 📱 Responsif HP */
-@media (max-width: 768px) {
-  .mars-container {
-    gap: 10px;
-    padding: 5vw; /* pakai satuan relatif biar fleksibel */
-    margin-right: 0;
-  }
+    .mars-card{
+        width:80%;
+        max-width:100%;
+        flex:none;
+        margin:0;
+        padding:16px;
+        box-sizing:border-box;
+        margin-left:-15%;
+        margin-top:40px;
+    }
 
-  .mars-card {
-    flex: 1 1 80%; /* jangan full 100% biar ada ruang sisi */
-    max-width: 80%;
-    padding: 4vw; /* padding pakai vw supaya proporsional */
-    border-radius: 8px;
-    margin-left: -2rem;
-  }
-
-  .mars h2 {
-    font-size: 1rem;
-  }
-
-  .mars h2::after {
-    width: 40%;
-    height: 2px;
-  }
-
-  .quote-post p {
-    font-size: 0.85rem;
-    line-height: 1.3;
-  }
-
-  .mars1 {
-    margin-left: 0.5rem;
-  }
-   /* Biar hymne card tetap tengah */
-  .col-12 {
+    .col-12{
+        padding:0 15px;
+        margin:0;
+    }
+.mars h2 {
+  position: relative;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+  color: #333;
+}
+.mars h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 2px;
+  background-color: #ffc107;
+  border-radius: 10%;
+}
+.mars p{
+  font-size: 0.85rem;
+}
+    .mars2 blockquote{
+        width:100%;
+        max-width:100%;
+    }
+    .mars1 li{
+        font-size:0.75rem;
+        margin-bottom: 3px;
+}
+    .mars1 p{
+        font-size:0.80rem;
+         margin-bottom: 4px;
+    }
+  .mars1 ul{
+    margin-top: 0;
+    padding-left: 20px;
+}
+.col-12{
     display: flex;
-    justify-content: center; /* tengah horizontal */
-    width: 100%;
-   margin-left:-0.5rem;
-  }
+    justify-content: center;
+    margin-top: 20px; /* atur sesuai kebutuhan */
 }
+    }
+
+
 </style>
 <!-- end mars & hymne -->

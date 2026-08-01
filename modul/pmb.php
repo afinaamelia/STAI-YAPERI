@@ -266,12 +266,12 @@
     }
 
     .about-content h4{
-        font-size:22px;
+        font-size:19px;
         overflow-wrap: break-word;
     }
 
     .about-content h5{
-        font-size:18px;
+        font-size:15px;
     }
 }
 </style>
