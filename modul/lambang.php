@@ -1,5 +1,3 @@
-
-
  <!-- Page Header Start -->
 <section id="PageHeader" class="page-header1">
     <div class="banner-overlay"></div>
@@ -117,19 +115,19 @@
 
 
    <!-- About Logo Start -->
-<section id="about" class="py-6 mt-5">
+<section id="about2">
   <div class="container mt-5">
     <div class="row mt-5 align-items-center g-5">
 
      <!-- Logo Image -->
- <div class="col-lg-6 col-md-12 wow fadeInUp mb-4 mb-lg-0 mt-5" data-wow-delay="0.5s">
+ <div class="col-lg-6 col-md-12 wow fadeInUp mb-4 mb-lg-0" data-wow-delay="0.5s">
   <div class="logo-box">
     <img src="img/logo1.png" alt="Logo STAI Yaperi" class="logo-img">
   </div>
 </div>
 
       <!-- Arti Logo -->
-      <div class="col-lg-6 wow fadeInUp mt-5" data-wow-delay="0.5s">
+      <div class="col-lg-6 wow fadeInUp mt-2" data-wow-delay="0.5s">
         <h6 class="text-primary text-uppercase mb-3">Arti Logo</h6>
         <h2 class="mb-4">STAI YAPERI CIBINONG</h2>
 
@@ -147,7 +145,7 @@
 
           <div class="logo-meaning-card">
             <span class="bullet">➡️</span>
-            <p><strong>Kapas berjumlah lima buah berwarna putih:</strong>Melambangkan rukun Islam yang wajib dilaksanakan agama islam, sehingga terwujud kesejahteraan yang adil dan merata.</p>
+            <p><strong>Kapas berjumlah lima buah berwarna putih:</strong> Melambangkan rukun Islam yang wajib dilaksanakan agama islam, sehingga terwujud kesejahteraan yang adil dan merata.</p>
           </div>
 
           <div class="logo-meaning-card">
@@ -182,37 +180,44 @@
    ABOUT LOGO
 =========================== */
 
-#about{
-    padding:90px 0;
+#about2{
+    padding:10px 0 90px; /* atas 50px, bawah 90px */
 }
 
-#about .row{
+#about2 .row{
     align-items:center;
 }
 
 /* Logo */
 
-#about .col-lg-6:first-child{
+#about2 .col-lg-6:first-child{
     display:flex;
     justify-content:center;
     align-items:center;
 }
+
 .logo-box{
+    width:100%;
+    max-width:380px;   /* biar box nggak terlalu lebar */
+    margin:auto;       /* benar-benar di tengah */
     background:#fff;
     border:3px solid #ffc107;
     border-radius:20px;
-    padding:35px;
+    padding:25px;
+    text-align:center;
 }
+
 .logo-img{
-    width:90%;
-    max-width:320px;
+    width:100%;
+    max-width:320px;   /* sebelumnya 320px */
     height:auto;
-    object-fit:contain;
+    display:block;
+    margin:0 auto;
 }
 
 /* Judul */
 
-#about h6{
+#about2 h6{
     color:#ffc107;
     font-weight:700;
     letter-spacing:2px;
@@ -220,7 +225,7 @@
     margin-bottom:10px;
 }
 
-#about h2{
+#about2 h2{
     position:relative;
     display:inline-block;
     font-size:2.2rem;
@@ -228,7 +233,7 @@
     margin-bottom:35px;
 }
 
-#about h2::after{
+#about2 h2::after{
     content:"";
     position:absolute;
     left:0;
@@ -278,6 +283,166 @@
 
 .logo-meaning-card strong{
     color:#222;
+}
+/* ==========================================
+   TABLET (991px ke bawah)
+========================================== */
+@media (max-width:991.98px){
+
+    #about2{
+        padding:1px 0 70px;
+    }
+
+    #about2 .row{
+        gap:2px;
+    }
+
+    /* Logo */
+    #about2 .col-lg-6:first-child{
+        justify-content:center;
+    }
+
+    .logo-box{
+        max-width:300px;
+        margin:0 auto;
+        padding:22px;
+    }
+
+    .logo-img{
+        max-width:290px;
+    }
+
+    /* Judul */
+    #about2 h6,
+    #about2 h2{
+        text-align:center;
+        display:block;
+    }
+
+    #about2 h2{
+        font-size:1.7rem;
+        margin-bottom:30px;
+    }
+
+    #about2 h2::after{
+        left:50%;
+        width:50%;
+        height:2px;
+        transform:translateX(-50%);
+    }
+
+    /* Card */
+    .logo-meaning-container{
+        gap:15px;
+    }
+
+    .logo-meaning-card{
+        padding:16px 18px;
+    }
+
+    .logo-meaning-card p{
+        font-size:15px;
+    }
+}
+
+
+/* ==========================================
+   MOBILE (767px ke bawah)
+========================================== */
+@media (max-width:767.98px){
+
+    #about2{
+        padding:1px 0 60px;
+    }
+
+    .logo-box{
+        max-width:280px;
+        padding:18px;
+        border-width:2px;
+    }
+
+    .logo-img{
+        max-width:200px;
+    }
+
+    #about2 h6{
+        font-size:10px;
+        letter-spacing:1px;
+        text-align:center;
+    }
+   #about h2::after{
+        width:50%;
+        height:2px;
+        margin-bottom:4px;
+    }
+    .logo-meaning-container{
+        gap:12px;
+    }
+
+    .logo-meaning-card{
+        padding:15px;
+        gap:12px;
+        border-radius:12px;
+    }
+
+    .logo-meaning-card .bullet{
+        font-size:18px;
+    }
+
+    .logo-meaning-card p{
+        font-size:14px;
+        line-height:1.6;
+    }
+}
+
+
+/* ==========================================
+   MOBILE KECIL (480px ke bawah)
+========================================== */
+@media (max-width:480px){
+
+    #about2{
+        padding:1px 0 50px;
+        margin-top: -100px;
+    }
+
+    .logo-box{
+        max-width:200px;
+        padding:15px;
+    }
+
+    .logo-img{
+        max-width:200px;
+    }
+    #about2 h6{
+        font-size:10px;
+        letter-spacing:1px;
+    }
+    #about2 h2{
+        font-size:1rem;
+        margin-top:-10px;
+    }
+   #about2 h2::after{
+        width:60%;
+        height:2px;
+        margin-bottom:4px;
+    }
+    .logo-meaning-card{
+        padding:14px;
+        width:85%;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .logo-meaning-card p{
+        font-size:11px;
+        text-align: justify;
+    }
+
+    .logo-meaning-card .bullet{
+        font-size:13px;
+    }
+    
 }
 </style>
 <!-- About Logo End -->

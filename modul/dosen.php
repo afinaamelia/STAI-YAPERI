@@ -1,118 +1,321 @@
-<div class="container-fluid page-header py-6 my-6 mt-0 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container text-center">
-            <h1 class="display-4 text-white animated slideInDown mb-4">Struktur Kampus</h1>
-            <nav aria-label="breadcrumb animated slideInDown">
-            </nav>
-        </div>
-    </div>
-    <!-- Page Header End -->
+<!-- Page Header Start -->
+<section id="PageHeader" class="page-header1">
+    <div class="banner-overlay"></div>
+
+    <div class="banner-content">
+       <h3>Struktural Kampus </h3>
+                   </div>
+</section>
+<style>
+ /* START CSS PageHeader */
+     #PageHeader{
+    position: relative;
+    min-height: 220px; /* sebelumnya 450px */
+
+    background-image: url("img/ft4.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#PageHeader::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75); /* Hitam transparan */
+}
+
+#PageHeader .banner-content{
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+}
+
+#PageHeader .banner-btn{
+    display: inline-block;
+    margin-top: 15px;
+    padding: 14px 35px;
+    background: #ffc107;
+    color: #000;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .3s;
+}
+
+#PageHeader .banner-btn:hover{
+    background: #fff;
+}
+#PageHeader h3{
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700; /* Tebal (bold) */
+    margin-bottom: 3px;
+}
+/* =========================
+   Responsive
+========================= */
+
+/* Tablet */
+@media (max-width: 992px) {
+    #PageHeader{
+        min-height: 200px;
+    }
+
+    #PageHeader .banner-content{
+        padding: 18px;
+    }
+
+    #PageHeader h3{
+        font-size: 1.8rem;
+    }
+
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    #PageHeader{
+        min-height: 180px;
+        background-position: center;
+    }
+
+    #PageHeader .banner-content{
+        padding: 15px;
+    }
+
+    #PageHeader h3{
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+    }
+}
+
+/* Mobile kecil */
+@media (max-width: 480px) {
+    #PageHeader{
+        min-height: 160px;
+    }
+
+    #PageHeader .banner-content{
+        padding: 12px;
+    }
+
+    #PageHeader h3{
+        font-size: 1.2rem;
+    }
+}
+/* END CSS PageHeader */
+</style>
+<!-- Page Header End -->
     <?php
   $sqloutput=$koneksi->query('SELECT*FROM tb_dosen');
   $tampil=$sqloutput->fetch_array();
 
 ?>
 <!-- Team Start -->
-<div class="team-container mt-5">
-  <div class="team-card">
-    <img src="admin/gbr/<?=$tampil['gambar1']?>" alt="Logo 1" class="team-img">
-  </div>
-  <div class="team-card card2">
-    <img src="admin/gbr/<?=$tampil['gambar2']?>" alt="Logo 2" class="team-img card2">
-  </div>
+<div class="team-section">
+
+    <div class="team-container">
+
+        <div class="team-card">
+            <img src="admin/gbr/<?=$tampil['gambar1']?>" alt="Struktur Organisasi" class="team-img">
+        </div>
+
+        <div class="team-card">
+            <img src="admin/gbr/<?=$tampil['gambar2']?>" alt="Struktur Pengurus" class="team-img">
+        </div>
+
+    </div>
+
 </div>
-
 <style>
-.team-container {
-  display: flex;
-  flex-direction: column; /* atas bawah */
-  align-items: center;
-  justify-content: center;
-  gap: 2rem; /* jarak antar card */
-  margin: 3rem auto;
-  width: 90%;
-  max-width: 700px;
+/*=========================================
+            SECTION
+=========================================*/
+
+.team-section{
+    padding:80px 0;
+    background:#f8f9fc;
 }
 
-/* ====== Card ====== */
-.team-card {
-  background: #fff;
-  border-radius: 20px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-  padding: 1.5rem;
-  transition: all 0.3s ease;
-  text-align: center;
-  width: 100%;
+
+/*=========================================
+            CONTAINER
+=========================================*/
+
+.team-container{
+    max-width:1200px;
+    width:92%;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
 }
 
-.team-card:hover {
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-  transform: translateY(-6px);
+
+/*=========================================
+              CARD
+=========================================*/
+
+.team-card{
+
+    background:#fff;
+
+    border-radius:22px;
+
+    padding:25px;
+
+    border-top:5px solid #ffc107;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+    overflow:hidden;
+
 }
 
-/* ====== Gambar ====== */
-.team-img {
-  width: 100%;
-  max-width: 300%; /* besar di PC */
-  height: auto;
-  border-radius: 12px;
-  transition: transform 0.3s ease;
+.team-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 40px rgba(0,0,0,.15);
+
 }
 
-.team-card:hover .team-img {
-  transform: scale(1.03);
+
+/*=========================================
+              IMAGE
+=========================================*/
+
+.team-img{
+
+    width:100%;
+
+    display:block;
+
+    border-radius:15px;
+
+    transition:.35s;
+
 }
 
-/* ====== RESPONSIVE ====== */
+.team-card:hover .team-img{
 
-/* Tablet (iPad, ukuran sedang) */
-@media (max-width: 992px) {
-  .team-container {
-    width: 95%;
-    max-width: 600px;
-    gap: 1.8rem;
-  }
+    transform:scale(1.02);
 
-  .team-card {
-    padding: 1.3rem;
-  }
-
-  .team-img {
-    max-width: 200%; /* sedikit kecil di tablet */
-  }
 }
 
-/* HP besar & iPad mini */
-@media (max-width: 768px) {
-  .team-container {
-    width: 90%;
-    margin: 2.5rem auto;
-  }
+/*=========================================
+            TABLET
+=========================================*/
 
-  .team-card {
-    padding: 1.2rem;
-    border-radius: 16px;
-  }
+@media (max-width:991px){
 
-  .team-img {
-    max-width: 150%; /* biar tetap pas di layar HP */
-  }
+.team-container{
+
+    grid-template-columns:1fr;
+    width:94%;
+    gap:25px;
+
 }
 
-/* HP kecil (≤ 480px) */
-@media (max-width: 480px) {
-  .team-container {
-    width: 100%;
-    margin: 2rem auto;
-    gap: 1.5rem;
-  }
+.team-card{
+    width:75%;
+    margin-left:76px;
+    padding:20px;
 
-  .team-card {
-    padding: 1rem;
-  }
+}
 
-  .team-img {
-    max-width: 120%; /* cukup besar tapi tidak melebihi layar */
-  }
+}
+
+
+/*=========================================
+            MOBILE
+=========================================*/
+
+@media (max-width:767px){
+
+.team-section{
+    padding:60px 0;
+}
+
+.team-container{
+    grid-template-columns:1fr;
+    width:95%;
+    gap:20px;
+
+}
+
+.team-card{
+    width:85%;
+    margin-left:29px;
+    padding:15px;
+
+}
+
+.team-img{
+    width:100%;
+    height:auto;
+    display:block;
+    border-radius:12px;
+}
+
+}
+
+
+/*=========================================
+        SMALL MOBILE
+=========================================*/
+
+@media (max-width:480px){
+
+.team-container{
+
+    width:100%;
+
+}
+
+.team-card{
+    width: 81%; 
+    padding:12px;
+
+}
+
+}
+@media (max-width:350px){
+
+.team-container{
+
+    width:100%;
+
+}
+
+.team-card{
+    width: 81%; 
+    padding:12px;
+    margin-left: 19px;
+}
+
+}
+@media (max-width:400px){
+
+.team-container{
+
+    width:100%;
+
+}
+
+.team-card{
+    width: 81%; 
+    padding:12px;
+}
 }
 </style>
 <!-- Team End -->
