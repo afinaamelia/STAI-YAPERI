@@ -1,113 +1,306 @@
+ <!-- Page Header Start -->
+<section id="PageHeader" class="page-header1">
+    <div class="banner-overlay"></div>
 
-      <!-- Page Header Start -->
-      <div class="container-fluid page-header py-6 my-6 mt-0 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container text-center">
-            <h1 class="display-4 text-white animated slideInDown mb-4">Kalender Akademik</h1>
-        </div>
-    </div>
+    <div class="banner-content">
+       <h3>Kalender Akademik</h3>
+                   </div>
+</section>
+<style>
+ /* START CSS PageHeader */
+     #PageHeader{
+    position: relative;
+    min-height: 220px; /* sebelumnya 450px */
+
+    background-image: url("img/ft4.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#PageHeader::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75); /* Hitam transparan */
+}
+
+#PageHeader .banner-content{
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+}
+
+#PageHeader .banner-btn{
+    display: inline-block;
+    margin-top: 15px;
+    padding: 14px 35px;
+    background: #ffc107;
+    color: #000;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .3s;
+}
+
+#PageHeader .banner-btn:hover{
+    background: #fff;
+}
+#PageHeader h3{
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700; /* Tebal (bold) */
+    margin-bottom: 3px;
+}
+/* =========================
+   Responsive
+========================= */
+
+/* Tablet */
+@media (max-width: 992px) {
+    #PageHeader{
+        min-height: 200px;
+    }
+
+    #PageHeader .banner-content{
+        padding: 18px;
+    }
+
+    #PageHeader h3{
+        font-size: 1.8rem;
+    }
+
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    #PageHeader{
+        min-height: 180px;
+        background-position: center;
+    }
+
+    #PageHeader .banner-content{
+        padding: 15px;
+    }
+
+    #PageHeader h3{
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+    }
+}
+
+/* Mobile kecil */
+@media (max-width: 480px) {
+    #PageHeader{
+        min-height: 160px;
+    }
+
+    #PageHeader .banner-content{
+        padding: 12px;
+    }
+
+    #PageHeader h3{
+        font-size: 1.2rem;
+    }
+}
+/* END CSS PageHeader */
+</style>
+<!-- Page Header End -->
     <?php
   $sqloutput=$koneksi->query('SELECT*FROM tb_akademik');
   $tampil=$sqloutput->fetch_array();
 
 ?>
     <!-- Page Header End -->
+
+    <section class="academic-section">
+    <div class="container">
+
+        <div class="academic-header">
+            <span class="academic-badge">Kalender Akademik</span>
+            <h2>Tahun Akademik 2026/2027</h2>
+            <p>
+                Klik gambar untuk melihat kalender akademik dalam ukuran penuh.
+            </p>
+        </div>
+
+        <div class="academic-poster">
+            <img src="admin/gbr/<?=$tampil['gambar']?>"
+                 id="gambarKecil"
+                 class="poster-img"
+                 alt="Kalender Akademik">
+        </div>
+
+    </div>
+</section>
+
+<!-- Overlay -->
+<div id="overlay" class="image-overlay">
+    <span class="close-btn">&times;</span>
+
+    <img src="admin/gbr/<?=$tampil['gambar']?>"
+         alt="Kalender Akademik">
+</div>
+
     <style>
-/* Kontainer untuk gambar kecil supaya bisa di tengah */
-.image-container {
-  display: flex;
-  justify-content: center; /* posisi horizontal di tengah */
-  align-items: center;     /* posisi vertikal bisa diatur juga kalau mau tengah halaman */
-  margin-top: 50px;        /* jarak dari atas halaman */
+/* ==========================
+   Kalender Akademik
+========================== */
+
+.academic-section{
+    padding:80px 0;
+    background:#f5f7fb;
 }
 
-/* Gambar kecil di halaman */
-.image-click {
-  width: 600px;
-  transition: transform 0.3s ease;
-  cursor: pointer;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-.image-click:hover {
-  transform: scale(1.05);
+.academic-header{
+    text-align:center;
+    margin-bottom:40px;
 }
 
-/* Overlay fullscreen (saat gambar diklik) */
-.image-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.85);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
+.academic-badge{
+    display:inline-block;
+    background:#0d6efd;
+    color:#fff;
+    padding:8px 20px;
+    border-radius:30px;
+    font-size:15px;
+    font-weight:600;
+    margin-bottom:15px;
 }
 
-/* Gambar di tengah fullscreen */
-.image-overlay img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 10px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.5);
-  animation: zoomIn 0.4s ease;
+.academic-header h2{
+    font-size:29px;
+    font-weight:700;
+    margin-bottom:10px;
+    color:#1f2937;
 }
 
-/* Tombol keluar (logo X) */
-.close-btn {
-  position: absolute;
-  top: 30px;
-  right: 40px;
-  font-size: 35px;
-  color: white;
-  cursor: pointer;
-  font-weight: bold;
-  transition: transform 0.2s;
-}
-.close-btn:hover {
-  transform: scale(1.2);
-  color: #ff4b4b;
+.academic-header p{
+    font-size:14px;
+    color:#6b7280;
+    max-width:600px;
+    margin:auto;
+    line-height:1.2;
 }
 
-/* Animasi zoom */
-@keyframes zoomIn {
-  from { transform: scale(0.7); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
+.academic-poster{
+    max-width:58%;
+    margin:auto;
+    background:#fff;
+    border-radius:18px;
+    padding:18px;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+
+.poster-img{
+    width:100%;
+    display:block;
+    border-radius:12px;
+    cursor:pointer;
+    transition:.35s;
+}
+
+.poster-img:hover{
+    transform:scale(1.02);
+    box-shadow:0 10px 30px rgba(0,0,0,.18);
+}
+
+/* Overlay */
+
+.image-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.9);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.image-overlay img{
+    width:auto;
+    max-width:95%;
+    max-height:95%;
+    border-radius:10px;
+    animation:zoom .3s;
+}
+
+.close-btn{
+    position:absolute;
+    top:20px;
+    right:35px;
+    color:#fff;
+    font-size:45px;
+    cursor:pointer;
+}
+
+@keyframes zoom{
+    from{
+        transform:scale(.85);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+/* Tablet */
+
+@media(max-width:991px){
+.academic-badge{
+  font-size:12px;
+}
+.academic-header h2{
+    font-size:25px;
+}
+.academic-header p{
+    font-size:12px;
+}
+.academic-poster{
+    max-width:60%;
+    padding:15px;
+}
+
+}
+
+/* Mobile */
+
+@media(max-width:576px){
+
+.academic-section{
+    padding:60px 0;
+}
+
+.academic-header h2{
+    font-size:18px;
+}
+
+.academic-header p{
+    font-size:14px;
+}
+
+.academic-poster{
+    padding:10px;
+    border-radius:15px;
+}
+
+.poster-img{
+    border-radius:10px;
+}
+
+.close-btn{
+    top:10px;
+    right:20px;
+    font-size:38px;
+}
+
 }
 </style>
 
-<!-- Gambar kecil di tengah -->
-<div class="image-container">
-  <img src="admin/gbr/<?=$tampil['gambar']?>" id="gambarKecil" class="image-click">
-</div>
-
-<!-- Overlay fullscreen -->
-<div id="overlay" class="image-overlay">
-  <span class="close-btn" id="closeBtn">&times;</span> <!-- logo X -->
-  <img src="admin/gbr/<?=$tampil['gambar']?>" alt="Gambar Besar">
-</div>
-
-<script>
-const gambarKecil = document.getElementById('gambarKecil');
-const overlay = document.getElementById('overlay');
-const closeBtn = document.getElementById('closeBtn');
-
-// Saat gambar kecil diklik → tampilkan overlay
-gambarKecil.addEventListener('click', () => {
-  overlay.style.display = 'flex';
-});
-
-// Saat tombol X diklik → sembunyikan overlay
-closeBtn.addEventListener('click', () => {
-  overlay.style.display = 'none';
-});
-
-// Klik di luar gambar juga menutup overlay
-overlay.addEventListener('click', (e) => {
-  if (e.target === overlay) {
-    overlay.style.display = 'none';
-  }
-});
-</script>
