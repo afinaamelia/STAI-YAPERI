@@ -112,14 +112,14 @@
 /* END CSS PageHeader */
 </style>
 <!-- Page Header End -->
+
     <?php
   $sqloutput=$koneksi->query('SELECT*FROM tb_akademik');
   $tampil=$sqloutput->fetch_array();
 
 ?>
-    <!-- Page Header End -->
 
-    <section class="academic-section">
+<section class="academic-section">
     <div class="container">
 
         <div class="academic-header">
@@ -152,20 +152,17 @@
 /* ==========================
    Kalender Akademik
 ========================== */
-
 .academic-section{
     padding:80px 0;
     background:#f5f7fb;
 }
-
 .academic-header{
     text-align:center;
     margin-bottom:40px;
 }
-
 .academic-badge{
     display:inline-block;
-    background:#0d6efd;
+    background:#ffc107;
     color:#fff;
     padding:8px 20px;
     border-radius:30px;
@@ -173,31 +170,40 @@
     font-weight:600;
     margin-bottom:15px;
 }
-
 .academic-header h2{
-    font-size:29px;
+    position:relative;
+    display:block;
+    font-size:25px;
     font-weight:700;
-    margin-bottom:10px;
+    margin-bottom:30px;
     color:#1f2937;
 }
-
+.academic-header h2::after{
+    content:"";
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    bottom:-10px;
+    width:30%;          /* panjang garis */
+    height:2px;
+    background:#ffc107;   /* kuning */
+    border-radius:50px;
+}
 .academic-header p{
-    font-size:14px;
+    font-size:15px;
     color:#6b7280;
     max-width:600px;
     margin:auto;
     line-height:1.2;
 }
-
 .academic-poster{
-    max-width:58%;
+    max-width:40%;
     margin:auto;
     background:#fff;
     border-radius:18px;
     padding:18px;
     box-shadow:0 15px 40px rgba(0,0,0,.08);
 }
-
 .poster-img{
     width:100%;
     display:block;
@@ -205,14 +211,11 @@
     cursor:pointer;
     transition:.35s;
 }
-
 .poster-img:hover{
     transform:scale(1.02);
     box-shadow:0 10px 30px rgba(0,0,0,.18);
 }
-
 /* Overlay */
-
 .image-overlay{
     position:fixed;
     inset:0;
@@ -222,7 +225,6 @@
     align-items:center;
     z-index:9999;
 }
-
 .image-overlay img{
     width:auto;
     max-width:95%;
@@ -230,7 +232,6 @@
     border-radius:10px;
     animation:zoom .3s;
 }
-
 .close-btn{
     position:absolute;
     top:20px;
@@ -239,7 +240,6 @@
     font-size:45px;
     cursor:pointer;
 }
-
 @keyframes zoom{
     from{
         transform:scale(.85);
@@ -250,57 +250,163 @@
         opacity:1;
     }
 }
-
-/* Tablet */
-
-@media(max-width:991px){
-.academic-badge{
-  font-size:12px;
+/* ===========================
+   TABLET (768px - 991px)
+=========================== */
+@media (max-width:991px){
+    .academic-section{
+        padding:60px 0;
+    }
+    .academic-badge{
+        font-size:12px;
+        padding:8px 18px;
+    }
+    .academic-header h2{
+        font-size:20px;
+        margin-bottom:25px;
+    }
+    .academic-header h2::after{
+        width:38%;
+    }
+    .academic-header p{
+        max-width:70%;
+        font-size:14px;
+        line-height:1.7;
+    }
+    .academic-poster{
+        max-width:60%;
+        padding:15px;
+    }
+    .close-btn{
+        font-size:40px;
+        right:25px;
+    }
 }
-.academic-header h2{
-    font-size:25px;
-}
-.academic-header p{
-    font-size:12px;
-}
-.academic-poster{
-    max-width:60%;
-    padding:15px;
-}
+/* ===========================
+   MOBILE (≤576px)
+=========================== */
+@media (max-width:576px){
+     .academic-section .container{
+        padding-left:1px;
+        padding-right:15px;
+    }
 
+    .academic-section{
+        padding:30px 0;
+    }
+    .academic-badge{
+        font-size:11px;
+        padding:5px 12px;
+    }
+    .academic-header h2{
+        font-size:18px;
+    }
+    .academic-header h2::after{
+        width:59%;
+        height:2px;
+    }
+    .academic-header p{
+        width:64%;
+        font-size:12px;
+        line-height:1.5;
+    }
+    .academic-poster{
+        max-width:70%;
+        padding:8px;
+        border-radius:10px;
+    }
+    .poster-img{
+        border-radius:8px;
+    }
+    .close-btn{
+        top:10px;
+        right:12px;
+        font-size:28px;
+    }
 }
+/* ===========================
+   MOBILE KECIL (≤400px)
+=========================== */
+@media (max-width:400px){
+     .academic-section .container{
+        padding-left:1px;
+        padding-right:10px;
+    }
 
-/* Mobile */
-
-@media(max-width:576px){
-
-.academic-section{
-    padding:60px 0;
+    .academic-section{
+        padding:30px 0;
+    }
+    .academic-badge{
+        font-size:11px;
+        padding:5px 12px;
+    }
+    .academic-header h2{
+        font-size:17px;
+    }
+    .academic-header h2::after{
+        width:65%;
+        height:2px;
+    }
+    .academic-header p{
+        width:60%;
+        font-size:10px;
+        line-height:1.5;
+    }
+    .academic-poster{
+        max-width:70%;
+        padding:8px;
+        border-radius:10px;
+    }
+    .poster-img{
+        border-radius:8px;
+    }
+    .close-btn{
+        top:10px;
+        right:12px;
+        font-size:28px;
+    }
 }
+/* ===========================
+   EXTRA SMALL (≤350px)
+=========================== */
+@media (max-width:350px){
+     .academic-section .container{
+        padding-left:1px;
+        padding-right:8px;
+    }
 
-.academic-header h2{
-    font-size:18px;
-}
-
-.academic-header p{
-    font-size:14px;
-}
-
-.academic-poster{
-    padding:10px;
-    border-radius:15px;
-}
-
-.poster-img{
-    border-radius:10px;
-}
-
-.close-btn{
-    top:10px;
-    right:20px;
-    font-size:38px;
-}
-
+    .academic-section{
+        padding:30px 0;
+    }
+    .academic-badge{
+        font-size:11px;
+        padding:5px 12px;
+    }
+    .academic-header h2{
+        font-size:17px;
+    }
+    .academic-header h2::after{
+        width:70%;
+        height:2px;
+    }
+    .academic-header p{
+        width:80%;
+        font-size:10px;
+        line-height:1.5;
+    }
+    .academic-poster{
+        max-width:70%;
+        padding:8px;
+        border-radius:10px;
+    }
+    .poster-img{
+        border-radius:8px;
+    }
+    .close-btn{
+        top:10px;
+        right:12px;
+        font-size:28px;
+    }
 }
 </style>
 

@@ -1,267 +1,250 @@
-<div class="container-fluid page-header py-6 my-6 mt-0 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container text-center">
-            <h1 class="display-4 text-white animated slideInDown mb-4">Jadwal Kuliah</h1>
-            <nav aria-label="breadcrumb animated slideInDown">
-            </nav>
-        </div>
-    </div>
-    <!-- Page Header End -->
+ <!-- Page Header Start -->
+<section id="PageHeader" class="page-header1">
+    <div class="banner-overlay"></div>
 
-  <!-- ===== Judul Halaman ===== -->
+    <div class="banner-content">
+       <h3>Jadwal Kuliah</h3>
+                   </div>
+</section>
 <style>
-/* ===== Judul Halaman (Desktop Default) ===== */
-.section-title {
-  font-size: 2rem;           /* ~32px */
-  font-weight: 700;
-  color: #2c2c2c;
-  margin-bottom: 60px;
-  position: relative;
-  letter-spacing: 1px;
-  text-align: center;        /* Biar tetap rapi tengah */
+ /* START CSS PageHeader */
+     #PageHeader{
+    position: relative;
+    min-height: 220px; /* sebelumnya 450px */
+
+    background-image: url("img/ft4.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.section-title::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -12px;
-  transform: translateX(-50%);
-  width: 36%;
-  height: 5px;
-  background-color: #ffc107;
-  border-radius: 10px;
+#PageHeader::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75); /* Hitam transparan */
 }
 
-/* ===== Tablet (max-width: 992px) ===== */
+#PageHeader .banner-content{
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+}
+
+#PageHeader .banner-btn{
+    display: inline-block;
+    margin-top: 15px;
+    padding: 14px 35px;
+    background: #ffc107;
+    color: #000;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .3s;
+}
+
+#PageHeader .banner-btn:hover{
+    background: #fff;
+}
+#PageHeader h3{
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700; /* Tebal (bold) */
+    margin-bottom: 3px;
+}
+/* =========================
+   Responsive
+========================= */
+
+/* Tablet */
 @media (max-width: 992px) {
-  .section-title {
-    font-size: 1.75rem;     /* sedikit lebih kecil */
-    margin-bottom: 50px;
-  }
+    #PageHeader{
+        min-height: 200px;
+    }
 
-  .section-title::after {
-    width: 45%;             /* garis agak panjang */
-    height: 4px;
-  }
+    #PageHeader .banner-content{
+        padding: 18px;
+    }
+
+    #PageHeader h3{
+        font-size: 1.8rem;
+    }
+
 }
 
-/* ===== HP Landscape (max-width: 768px) ===== */
+/* Mobile */
 @media (max-width: 768px) {
-  .section-title {
-    font-size: 1.5rem;      /* ~24px */
-    margin-bottom: 40px;
-  }
+    #PageHeader{
+        min-height: 180px;
+        background-position: center;
+    }
 
-  .section-title::after {
-    width: 50%;
-    height: 3.5px;
-  }
+    #PageHeader .banner-content{
+        padding: 15px;
+    }
+
+    #PageHeader h3{
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+    }
 }
 
-/* ===== HP Kecil (max-width: 576px) ===== */
-@media (max-width: 576px) {
-  .section-title {
-    font-size: 1.3rem;      /* ~21px */
-    margin-bottom: 35px;
-  }
+/* Mobile kecil */
+@media (max-width: 480px) {
+    #PageHeader{
+        min-height: 160px;
+    }
 
-  .section-title::after {
-    width: 60%;
-    height: 3px;
-  }
+    #PageHeader .banner-content{
+        padding: 12px;
+    }
+
+    #PageHeader h3{
+        font-size: 1.2rem;
+    }
 }
+/* END CSS PageHeader */
 </style>
+<!-- Page Header End -->
 
-  <div class="text-center mb-5">
-    <h2 class="section-title">Jadwal Kuliah STAI YAPERI CIBINONG</h2>
-  </div>
- <!-- ===== END Judul Halaman ===== -->
 
-<!-- ===== Jadwal Kuliah ===== -->
-<div class="container my-5">
-  <!-- Grid Card -->
-  <div class="wrapper text-center">
-    <?php
-     $sqloutput = $koneksi->query("SELECT * FROM tb_jadwal ORDER BY id_jadwal ASC");
-      while ($tampil = $sqloutput->fetch_array()) {
-    ?>
-      <div class="col-lg-3 col-md-6 col-sm-12 mb-4 d-flex justify-content-center">
-        <div class="card shadow-lg border-0 rounded-4 gallery-card h-100 mx-auto">
-          
-          <div class="card-body p-3 bg-light rounded-bottom-4">
-            <h5 class="fw-bold text-dark mb-0">
-              <?= htmlspecialchars($tampil['judul_semester']) ?>
-            </h5>
-          </div>
+  <div class="container py-5">
 
-         <a href="../admin/gbr/<?= $tampil['gambar'] ?>" 
-   class="gallery-link position-relative d-block" 
-   onclick="openModal(event, this)">
-  <img src="admin/gbr/<?= $tampil['gambar'] ?>" 
-       alt="<?= htmlspecialchars($tampil['judul_semester']) ?>"
-       class="gallery-img card-img-top rounded-top-4">
-  <!-- Ikon kaca pembesar -->
-  <div class="always-icon">
-    <i class="fa fa-search-plus"></i>
-  </div>
-</a>
-
-<!-- ===== Modal Gambar ===== -->
-<div id="imageModal" class="custom-modal">
-  <div class="modal-wrapper">
-    <div class="img-container">
-      <img class="modal-content" id="modalImg">
-      <!-- Tombol close di dalam gambar -->
-      <span class="inner-close" onclick="closeModal()">
-        <i class="fa fa-times"></i>
-      </span>
+    <div class="text-center mb-5">
+        <span class="schedule-badge">Jadwal Perkuliahan</span>
+        <h2 class="schedule-title">Jadwal Kuliah STAI YAPERI CIBINONG</h2>
+        <p class="schedule-desc">
+            Silakan unduh jadwal kuliah sesuai semester yang dipilih.
+        </p>
     </div>
-  </div>
-</div>
+
+    <div class="row g-4 justify-content-center">
+
+        <?php
+        $sqloutput = $koneksi->query("SELECT * FROM tb_jadwal ORDER BY id_jadwal ASC");
+        while($tampil = $sqloutput->fetch_array()){
+        ?>
+
+        <div class="col-lg-4 col-md-6">
+
+            <div class="schedule-card">
+
+                <div class="schedule-image">
+                    <img src="admin/gbr/<?= $tampil['gambar'] ?>"
+                         alt="<?= htmlspecialchars($tampil['judul_semester']) ?>">
+                </div>
+
+                <div class="schedule-content">
+
+                    <h5><?= htmlspecialchars($tampil['judul_semester']) ?></h5>
+
+                    <a href="admin/gbr/<?= $tampil['gambar'] ?>"
+                       download
+                       class="download-btn">
+                        <i class="fa fa-download"></i>
+                        Download Jadwal
+                    </a>
+
+                </div>
+
+            </div>
+
         </div>
-      </div>
-    <?php } ?>
-  </div>
+
+        <?php } ?>
+
+    </div>
+
 </div>
 
 <!-- ===== CSS ===== -->
 <style>
-/* ===== Struktur Grid Utama ===== */
-.wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; 
-  gap: 2rem; /* jarak antar card */
-  margin: 0 auto;
-  padding: 1rem;
+.schedule-badge{
+    display:inline-block;
+    background:#ffc107;
+    color:#fff;
+    padding:8px 18px;
+    border-radius:30px;
+    font-size:14px;
+    font-weight:600;
+    margin-bottom:15px;
 }
 
-/* ===== Kartu ===== */
-.gallery-card {
-  flex: 1 1 calc(33.333% - 2rem); /* default: 3 kolom */
-  max-width: 22rem;
-  background: #fff;
-  border-radius: 0.75rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.schedule-title{
+    font-size:34px;
+    font-weight:700;
+    margin-bottom:15px;
+    position:relative;
 }
 
-.gallery-card:hover {
-  transform: translateY(-0.4rem);
-  box-shadow: 0 0.6rem 1.2rem rgba(0, 0, 0, 0.15);
+.schedule-title::after{
+    content:"";
+    width:130px;
+    height:3px;
+    background:#ffc107;
+    display:block;
+    margin:12px auto 0;
+    border-radius:30px;
 }
 
-/* ===== Gambar ===== */
-.gallery-img {
-  width: 100%;
-  aspect-ratio: 1 / 1; /* bikin persegi proporsional */
-  object-fit: cover;
-  border-radius: 0.75rem 0.75rem 0 0;
-  display: block;
-  cursor: pointer;
+.schedule-desc{
+    color:#777;
+    max-width:550px;
+    margin:auto;
 }
 
-/* ===== Ikon kaca pembesar di gambar utama ===== */
-.always-icon {
-  position: absolute;
-  top: 0.8rem;
-  right: 0.8rem;
-  background: rgba(17, 153, 142, 0.9);
-  color: #fff;
-  padding: 0.55rem 0.7rem;
-  border-radius: 50%;
-  font-size: 1.1rem;
-  box-shadow: 0 0.15rem 0.4rem rgba(0,0,0,0.3);
-  transition: transform 0.2s ease;
-}
-.always-icon:hover {
-  transform: scale(1.1);
+.schedule-card{
+    background:#fff;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.35s;
+    height:100%;
 }
 
-/* ===== Modal ===== */
-.custom-modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 1000;
-  background: rgba(0,0,0,0.9);
-  justify-content: center;
-  align-items: center;
+.schedule-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 18px 35px rgba(0,0,0,.12);
 }
 
-.modal-wrapper {
-  position: relative;
-  max-width: 90%;
-  max-height: 90%;
+.schedule-image img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    display:block;
 }
 
-.img-container {
-  position: relative;
-  display: inline-block;
+.schedule-content{
+    padding:20px;
+    text-align:center;
 }
 
-.modal-content {
-  width: 100%;
-  max-height: 90vh;
-  object-fit: contain;
-  border-radius: 10px;
-  display: block;
+.schedule-content h5{
+    font-weight:700;
+    margin-bottom:18px;
 }
 
-/* ===== Tombol close di dalam gambar ===== */
-.inner-close {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  background: rgba(255,255,255,0.85);
-  color: #111;
-  font-size: 1.3rem;
-  border-radius: 50%;
-  padding: 6px 10px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  z-index: 10;
-}
-.inner-close:hover {
-  background: #ff5252;
-  color: #fff;
+.download-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:12px 22px;
+    background:#ffc107;
+    color:#222;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
 }
 
-/* ===== Judul ===== */
-.card-body h5 {
-  color: #000 !important;
-  font-size: 1.1rem;
-  text-align: center;
-}
-
-/* ===== Tablet ===== */
-@media (max-width: 992px) {
-  .gallery-card {
-    flex: 1 1 calc(50% - 2rem); /* 2 kolom */
-    max-width: 20rem;
-  }
-}
-
-/* ===== HP ===== */
-@media (max-width: 576px) {
-  .gallery-card {
-    flex: 1 1 100%; /* 1 kolom */
-    max-width: 22rem;
-  }
+.download-btn:hover{
+    background:#e6ac00;
+    color:#fff;
 }
 </style>
-
-<script>
-function openModal(event, link) {
-  event.preventDefault();
-  const imgSrc = link.querySelector('img').src;
-  document.getElementById("modalImg").src = imgSrc;
-  document.getElementById("imageModal").style.display = "flex";
-}
-
-function closeModal() {
-  document.getElementById("imageModal").style.display = "none";
-}
-</script>
