@@ -1,65 +1,118 @@
-  <style>
-        /*=================================================================
-  Services section
-==================================================================*/
-.services {
-  padding: 100px 0 130px;
-}
-.services .service-block.color-bg {
-  background: #ffc107;
-  color: #fff;
-}
-.services .service-block.color-bg i, .services .service-block.color-bg h3, .services .service-block.color-bg p {
-  color: #fff;
-}
-.services .service-block .service-icon {
-  margin-bottom: 30px;
-}
-.services .service-block i {
-  font-size: 75px;
-  color: #28ABE3;
-}
-.services .service-block h3 {
-  color: #333;
-  font-size: 18px;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-.services .service-block p {
-  font-size: 14px;
-  color: #666;
+ <!-- Page Header Start -->
+<section id="PageHeader" class="page-header1">
+    <div class="banner-overlay"></div>
+
+    <div class="banner-content">
+       <h3>Alur Pendaftaran Mahasiswa Baru</h3>
+                   </div>
+</section>
+<style>
+ /* START CSS PageHeader */
+     #PageHeader{
+    position: relative;
+    min-height: 220px; /* sebelumnya 450px */
+
+    background-image: url("img/ft4.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/*=================================================================
-  Services section 2
-==================================================================*/
-.service-2 .service-item {
-  border: 1px solid #eee;
-  margin-bottom: 30px;
-  padding: 50px 20px;
-  transition: all 0.3s ease 0s;
+#PageHeader::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75); /* Hitam transparan */
 }
-.service-2 .service-item:hover {
-  box-shadow: 0 5px 65px 0 rgba(0, 0, 0, 0.15);
-  -webkit-box-shadow: 0 5px 65px 0 rgba(0, 0, 0, 0.15);
+
+#PageHeader .banner-content{
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
 }
-.service-2 .service-item:hover i {
-  background: #fff;
-  color: #28ABE3;
+
+#PageHeader .banner-btn{
+    display: inline-block;
+    margin-top: 15px;
+    padding: 14px 35px;
+    background: #ffc107;
+    color: #000;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .3s;
 }
-.service-2 .service-item i {
-  font-size: 30px;
-  display: inline-block;
-  background: #ffc107 none repeat scroll 0 0;
-  border-radius: 30px;
-  box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.1);
-  color: #fff;
-  height: 55px;
-  line-height: 55px;
-  margin-bottom: 20px;
-  width: 55px;
-  transition: all 0.3s ease 0s;
+
+#PageHeader .banner-btn:hover{
+    background: #fff;
 }
+#PageHeader h3{
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700; /* Tebal (bold) */
+    margin-bottom: 3px;
+}
+/* =========================
+   Responsive
+========================= */
+
+/* Tablet */
+@media (max-width: 992px) {
+    #PageHeader{
+        min-height: 200px;
+    }
+
+    #PageHeader .banner-content{
+        padding: 18px;
+    }
+
+    #PageHeader h3{
+        font-size: 1.8rem;
+    }
+
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    #PageHeader{
+        min-height: 180px;
+        background-position: center;
+    }
+
+    #PageHeader .banner-content{
+        padding: 15px;
+    }
+
+    #PageHeader h3{
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+    }
+}
+
+/* Mobile kecil */
+@media (max-width: 480px) {
+    #PageHeader{
+        min-height: 160px;
+    }
+
+    #PageHeader .banner-content{
+        padding: 12px;
+    }
+
+    #PageHeader h3{
+        font-size: 1.2rem;
+    }
+}
+/* END CSS PageHeader */
+</style>
+<!-- Page Header End -->   
+ 
 </style>
     <!-- Start Services Section
 ==================================== -->
@@ -69,81 +122,202 @@
 
 ?>
 
-<section class="services" id="services">
-  <div class="container">
-      <div class="row justify-content-center">
-          <div class="col-xl-12 col-lg-8" style="margin-top:-45px;">
-            <div class="title text-center">
-              <h2>Tata cara Pendaftaran dan Pembayaran Online</h2>
-              <div class="border"></div>
-              <div class="row mt-5">
-                  <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0 ">
-                    <div class="service-block p-4 color-bg text-center" style="height:300px;">
-                      <div class="service-icon text-center">
-                        <i class="tf-ion-ios-copy-outline"></i>
-                                    <img src="img/one.png" class="mb-4" alt="icon" style="width:89px;">
-                      </div>
-                      <p style="font-size:20px; margin-top:-20px;">Membayar biaya pendaftaran seharga Rp 500.000,-</p>
-                    </div>
-                  </div>
+<section class="alur-section">
 
-                  <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-                    <div class="service-block p-4 text-center">
-                      <div class="service-icon text-center">
-                        <i class="tf-ion-ios-alarm-outline"></i>
-                                    <img src="img/two.png" class="mb-4" alt="icon" style="width:89px;">
-                      </div>
-                      <p style="font-size:20px; margin-top:-25px;"> Transfer melalui bank</p>
-                              <h2> <li style="font-size:16px;">BCA : 1671381667 (moch zaky azima)</li><h2>
-                                <li style="font-size:16px; ">BSI : 7124995498 (Muhammad Zaky Azima)</li>
-                    </div>
-                  </div>
+    <div class="container">
 
-                  <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-                    <div class="service-block p-4 color-bg text-center" style="height:300px;">
-                      <div class="service-icon text-center">
-                        <i class="tf-ion-ios-book-outline"></i>
-                                    <img src="img/three.png" class="mb-4" alt="icon" style="width:100px;">
-                      </div>
-                      <p style="font-size:20px; margin-top:-20px;">Uploud bukti pembayaran di G.form yang sudah kami sediakan</p>
-                    </div>
-                  </div>
-              </div>
-              
+        <div class="alur-header">
+            <span class="alur-badge">PMB STAI YAPERI</span>
+            <h2>Alur Pendaftaran Mahasiswa Baru</h2>
+            <p>Ikuti langkah-langkah berikut untuk menyelesaikan proses pendaftaran.</p>
+        </div>
+
+        <div class="alur-wrapper">
+
+            <!-- Step 1 -->
+            <div class="alur-item">
+
+                <div class="alur-circle">
+                    <img src="img/one.png" alt="">
+                </div>
+
+                <span class="step">Langkah 01</span>
+
+                <h4>Pembayaran Registrasi</h4>
+
+                <p>
+                    Bayar biaya pendaftaran sebesar
+                    <strong>Rp500.000</strong>.
+                </p>
 
             </div>
+
+            <!-- Step 2 -->
+            <div class="alur-item">
+
+                <div class="alur-circle">
+                    <img src="img/two.png" alt="">
+                </div>
+
+                <span class="step">Langkah 02</span>
+
+                <h4>Transfer ke Rekening</h4>
+
+                <div class="rekening-card">
+                    <p><strong>BCA</strong><br>1671381667<br>Moch Zaky Azima</p>
+
+                    <hr>
+
+                    <p><strong>BSI</strong><br>7124995498<br>Muhammad Zaky Azima</p>
+                </div>
+
+            </div>
+
+            <!-- Step 3 -->
+            <div class="alur-item">
+
+                <div class="alur-circle">
+                    <img src="img/three.png" alt="">
+                </div>
+
+                <span class="step">Langkah 03</span>
+
+                <h4>Upload Bukti</h4>
+
+                <p>
+                    Upload bukti pembayaran pada Google Form
+                    yang telah disediakan.
+                </p>
+
+            </div>
+
         </div>
-      </div>
-  </div>
+
+    </div>
+
 </section>
-
 <style>
-    .call-to-action {
-    background-color: #ffc107;
-    padding: 30px;
-    width:1089px;
-    margin-left :90px;
-    margin-top: -100px;
-    }
-    *, ::after, ::before {
-    box-sizing: border-box;
-    }
-    div {
-    display: block;
-}
-.btn:not(:disabled):not(.disabled) {
-    cursor: pointer;
-}
-a:link, a:visited {
-    text-decoration: none;
-}
-.warning {
-  border-color: white;
-  color: white;
+  .alur-section{
+    padding:90px 0;
+    background:#f8fafc;
 }
 
-.warning:hover {
-  background: white;
-  color: #ffc107;
+.alur-header{
+    text-align:center;
+    margin-bottom:70px;
 }
-    </style>
+
+.alur-badge{
+    display:inline-block;
+    background:#ffc107;
+    color:#fff;
+    padding:8px 18px;
+    border-radius:30px;
+    font-size:14px;
+    margin-bottom:15px;
+}
+
+.alur-header h2{
+    font-size:34px;
+    font-weight:700;
+    color:#0f2d52;
+}
+
+.alur-header p{
+    color:#6b7280;
+}
+
+.alur-wrapper{
+
+    display:flex;
+    justify-content:space-between;
+    position:relative;
+    gap:30px;
+
+}
+
+.alur-wrapper::before{
+
+    content:"";
+    position:absolute;
+    top:50px;
+    left:12%;
+    right:12%;
+    height:3px;
+    background:#ffc107;
+    z-index:0;
+
+}
+
+.alur-item{
+
+    width:33%;
+    text-align:center;
+    position:relative;
+    z-index:2;
+
+}
+
+.alur-circle{
+
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    background:#fff;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:auto auto 20px;
+
+}
+
+.alur-circle img{
+
+    width:45px;
+
+}
+
+.step{
+
+    display:inline-block;
+    background:#0f2d52;
+    color:#fff;
+    padding:5px 15px;
+    border-radius:20px;
+    font-size:13px;
+    margin-bottom:15px;
+
+}
+
+.alur-item h4{
+
+    font-weight:700;
+    margin-bottom:15px;
+
+}
+
+.alur-item p{
+
+    color:#666;
+    line-height:1.7;
+
+}
+
+.rekening-card{
+
+    background:#fff;
+    border-radius:15px;
+    padding:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.05);
+
+}
+
+.rekening-card hr{
+
+    margin:15px 0;
+
+}
+</style>
+
+    
