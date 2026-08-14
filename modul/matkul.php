@@ -114,53 +114,56 @@
 <!-- Page Header End -->
 
 
-  <div class="container py-5">
-
+ <div class="container py-5">
     <div class="text-center mb-5">
         <span class="schedule-badge">Jadwal Perkuliahan</span>
-        <h2 class="schedule-title">Jadwal Kuliah STAI YAPERI CIBINONG</h2>
+        <h2 class="schedule-title">
+            Jadwal Kuliah STAI YAPERI CIBINONG
+        </h2>
         <p class="schedule-desc">
-            Silakan unduh jadwal kuliah sesuai semester yang dipilih.
+            Silakan lihat jadwal kuliah sesuai semester yang dipilih.
         </p>
     </div>
-
     <div class="row g-4 justify-content-center">
 
-        <?php
-        $sqloutput = $koneksi->query("SELECT * FROM tb_jadwal ORDER BY id_jadwal ASC");
+<?php
+        $sqloutput = $koneksi->query("
+            SELECT * 
+            FROM tb_jadwal 
+            ORDER BY id_jadwal ASC
+        ");
+
         while($tampil = $sqloutput->fetch_array()){
         ?>
 
         <div class="col-lg-4 col-md-6">
-
             <div class="schedule-card">
 
+            <!-- GAMBAR JADWAL -->
                 <div class="schedule-image">
-                    <img src="admin/gbr/<?= $tampil['gambar'] ?>"
-                         alt="<?= htmlspecialchars($tampil['judul_semester']) ?>">
-                </div>
+                    <img 
+                        src="admin/gbr/<?= htmlspecialchars($tampil['gambar']) ?>"
+                        alt="<?= htmlspecialchars($tampil['judul_semester']) ?>">
 
+                </div>
+                <!-- CONTENT -->
                 <div class="schedule-content">
-
-                    <h5><?= htmlspecialchars($tampil['judul_semester']) ?></h5>
-
-                    <a href="admin/gbr/<?= $tampil['gambar'] ?>"
-                       download
-                       class="download-btn">
-                        <i class="fa fa-download"></i>
-                        Download Jadwal
+                    <h5>
+                        <?= htmlspecialchars($tampil['judul_semester']) ?>
+                    </h5>
+                    <!-- TOMBOL LIHAT -->
+                    <a 
+                        href="admin/gbr/<?= htmlspecialchars($tampil['gambar']) ?>"
+                        target="_blank"
+                        class="download-btn" >
+                        <i class="fa fa-eye"></i>
+                        Lihat Jadwal
                     </a>
-
                 </div>
-
             </div>
-
         </div>
-
         <?php } ?>
-
     </div>
-
 </div>
 
 <!-- ===== CSS ===== -->
@@ -175,14 +178,12 @@
     font-weight:600;
     margin-bottom:15px;
 }
-
 .schedule-title{
     font-size:34px;
     font-weight:700;
     margin-bottom:15px;
     position:relative;
 }
-
 .schedule-title::after{
     content:"";
     width:130px;
@@ -192,13 +193,11 @@
     margin:12px auto 0;
     border-radius:30px;
 }
-
 .schedule-desc{
     color:#777;
     max-width:550px;
     margin:auto;
 }
-
 .schedule-card{
     background:#fff;
     border-radius:18px;
@@ -207,32 +206,28 @@
     transition:.35s;
     height:100%;
 }
-
 .schedule-card:hover{
     transform:translateY(-8px);
     box-shadow:0 18px 35px rgba(0,0,0,.12);
 }
-
 .schedule-image img{
     width:100%;
     height:280px;
     object-fit:cover;
     display:block;
 }
-
 .schedule-content{
     padding:20px;
     text-align:center;
 }
-
 .schedule-content h5{
     font-weight:700;
     margin-bottom:18px;
 }
-
 .download-btn{
     display:inline-flex;
     align-items:center;
+    justify-content:center;
     gap:8px;
     padding:12px 22px;
     background:#ffc107;
@@ -242,9 +237,9 @@
     font-weight:600;
     transition:.3s;
 }
-
 .download-btn:hover{
     background:#e6ac00;
     color:#fff;
+    transform:translateY(-2px);
 }
 </style>
